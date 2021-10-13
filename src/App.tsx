@@ -1,26 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {ChangeFaviconDynamic} from './Components/ChangeFaviconDynamic';
+import {MemoAndUseMemo} from './Components/MemoAndUseMemo';
+import {TypeContextStore} from './Components/TypeContextStore/TypeContextStore';
+import './index.css'
+import {ComponentRedux} from './Components/ReduxStoreSelectorDis/ComponentRedux';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export const App = () => {
+
+    return <>
+        <ChangeFaviconDynamic/>
+        {/*<MemoAndUseMemo/>*/}
+        {/*<TypeContextStore/>*/}
+        {/*<ComponentRedux/>*/}
+    </>
 }
 
 export default App;
