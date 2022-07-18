@@ -20,7 +20,6 @@ export const MemoAndUseMemo = () => {
         return newArr
     }, [arr])
 
-
     const renameName = useMemo(() => {
         console.log('call renameName')
         return value + 1

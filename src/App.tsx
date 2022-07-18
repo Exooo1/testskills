@@ -1,18 +1,31 @@
-import React from 'react';
-import {ChangeFaviconDynamic} from './Components/ChangeFaviconDynamic';
-import {MemoAndUseMemo} from './Components/MemoAndUseMemo';
-import {TypeContextStore} from './Components/TypeContextStore/TypeContextStore';
+import React, {useEffect, useRef, useState} from 'react';
 import './index.css'
-import {ComponentRedux} from './Components/ReduxStoreSelectorDis/ComponentRedux';
+import {ProgressFileBar} from './Components/ProgressBarFile/progressFileBar';
+import axios from "axios";
+import {TestReactDevTools} from "./index";
+
+
 
 export const App = () => {
-
+    console.log('value')
+    const [value, setValue] = useState('')
     return <>
-        <ChangeFaviconDynamic/>
-        {/*<MemoAndUseMemo/>*/}
-        {/*<TypeContextStore/>*/}
-        {/*<ComponentRedux/>*/}
+        <div>
+            <h1>TestReactDevTools</h1>
+            <h3>ourValue {value}</h3>
+            <input type="text" value={value} onChange={(e) => setValue(e.target.value)}/>
+            <TestReactDevTools/>
+            {/*<ChangeFaviconDynamic/>*/}
+            {/*<MemoAndUseMemo/>*/}
+            {/*<TypeContextStore/>*/}
+            {/*<ComponentRedux/>*/}
+            {/*<UseCallbackTest/>*/}
+            {/*<ShadowComponent>*/}
+            {/*<Transition/>*/}
+            {/*<TestSuspense/>*/}
+            {/*<ProgressFileBar/>*/}
+        </div>
     </>
 }
 
-export default App;
+
