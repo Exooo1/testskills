@@ -1,31 +1,28 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React from 'react';
 import './index.css'
-import {ProgressFileBar} from './Components/ProgressBarFile/progressFileBar';
-import axios from "axios";
-import {TestReactDevTools} from "./index";
-
+import {String} from "./Components/Flangan/String/String";
+import {Array} from "./Components/Flangan/Array/Array";
+import {FuntioncGenerators} from "./Components/Flangan/Function/FuntioncGenerators";
+import {Number} from "./Components/Flangan/Number/Number";
 
 
 export const App = () => {
-    console.log('value')
-    const [value, setValue] = useState('')
-    return <>
-        <div>
-            <h1>TestReactDevTools</h1>
-            <h3>ourValue {value}</h3>
-            <input type="text" value={value} onChange={(e) => setValue(e.target.value)}/>
-            <TestReactDevTools/>
-            {/*<ChangeFaviconDynamic/>*/}
-            {/*<MemoAndUseMemo/>*/}
-            {/*<TypeContextStore/>*/}
-            {/*<ComponentRedux/>*/}
-            {/*<UseCallbackTest/>*/}
-            {/*<ShadowComponent>*/}
-            {/*<Transition/>*/}
-            {/*<TestSuspense/>*/}
-            {/*<ProgressFileBar/>*/}
-        </div>
-    </>
+    return <div>
+        {/*<Functions/>*/}
+        {/*<FuntioncGenerators/>*/}
+        {/*<String/>*/}
+        <Number/>
+        {/*<Array/>*/}
+        {/*<ChangeFaviconDynamic/>*/}
+        {/*<MemoAndUseMemo/>*/}
+        {/*<TypeContextStore/>*/}
+        {/*<ComponentRedux/>*/}
+        {/*<UseCallbackTest/>*/}
+        {/*<ShadowComponent>*/}
+        {/*<Transition/>*/}
+        {/*<TestSuspense/>*/}
+        {/*<ProgressFileBar/>*/}
+    </div>
 }
 
 
