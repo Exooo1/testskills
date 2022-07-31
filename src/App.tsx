@@ -1,17 +1,14 @@
 import React from 'react';
 import './index.css'
-import {String} from "./Components/Flangan/String/String";
-import {Array} from "./Components/Flangan/Array/Array";
-import {FuntioncGenerators} from "./Components/Flangan/Function/FuntioncGenerators";
 import {NumberT} from "./Components/Flangan/Number/Number";
-
-
+import {String} from "./Components/Flangan/String/String";
+console.log('2')
 export const App = () => {
     return <div>
         {/*<Functions/>*/}
         {/*<FuntioncGenerators/>*/}
-        {/*<String/>*/}
-        <NumberT/>
+        <String/>
+        {/*<NumberT/>*/}
         {/*<Array/>*/}
         {/*<ChangeFaviconDynamic/>*/}
         {/*<MemoAndUseMemo/>*/}

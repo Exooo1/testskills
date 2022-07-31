@@ -5,6 +5,19 @@ export const String = () => {
         <h1>String</h1>
     </div>
 }
+console.log('string')
+console.log("string")
+console.log(`string${6}ES`)
+const anyValue = "опе\
+long\
+line"
+console.log(anyValue)
+const anyValue2 = 'Hello he\'s'
+console.log(anyValue2)
+const anyValue3 = 'Hello he\'s amazing\n guy '
+console.log(anyValue3)
+const anyValue4 = 'Hello he\'s amazing\r guy '
+console.log(anyValue4)
 //Идентификаторы
 let any = 'Vlas'
 let _any = 'Vlas'
