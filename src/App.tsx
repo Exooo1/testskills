@@ -2,12 +2,13 @@ import React from 'react';
 import './index.css'
 import {NumberT} from "./Components/Flangan/Number/Number";
 import {String} from "./Components/Flangan/String/String";
-console.log('2')
+import {SvgTest} from "./Components/SVG/SvgTest";
 export const App = () => {
     return <div>
+        <SvgTest/>
         {/*<Functions/>*/}
         {/*<FuntioncGenerators/>*/}
-        <String/>
+        {/*<String/>*/}
         {/*<NumberT/>*/}
         {/*<Array/>*/}
         {/*<ChangeFaviconDynamic/>*/}

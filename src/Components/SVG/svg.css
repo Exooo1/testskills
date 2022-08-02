@@ -1,0 +1,21 @@
+.svgTest {
+    color: blueviolet;
+}
+
+.svg {
+    margin: 10px 10px;
+    width: 400px;
+    height: 400px;
+    background: blueviolet;
+}
+
+.chart {
+    transform: rotate(calc(155 * 1deg));
+    border-radius: 50%;
+    width: 50%;
+    padding-top: 50%;
+    float: left;
+    padding-right: 20px;
+    background: conic-gradient(red 20%, yellow 30%, gold 40%, green 100%, fuchsia 100%);
+    height: 300px;
+}
