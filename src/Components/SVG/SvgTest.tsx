@@ -64,6 +64,16 @@ export const SvgTest = () => {
                 <rect x="75" y="75" width="75" height="75" fill="yellow"/>
             </g>
         </svg>
+        <svg width="230" height="120" xmlns="http://www.w3.org/2000/svg">
+            <filter id="blurMe">
+                <feGaussianBlur stdDeviation="1"/>
+            </filter>
+
+            <circle cx="60" cy="60" r="50" fill="green"/>
+
+            <circle cx="170" cy="60" r="50" fill="green" filter="url(#blurMe)"/>
+        </svg>
+
         {/*<input type="range" value={range} onChange={(e) => setRange(+e.target.value)}/>*/}
         {/*<svg className={'svg'}>*/}
         {/*    <rect width='200' height='150' fill='#324123' x='100' y='125' rx='10'/>*/}
