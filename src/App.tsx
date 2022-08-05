@@ -35,6 +35,15 @@ export const App = () => {
         {/*<ProgressFileBar/>*/}
     </div>
 }
+// const cron = (value: number, fun: () => void) => {
+//     setInterval(() => {
+//         fun()
+//     }, value * 1000)
+// }
+//
+// cron(10, () => {
+//     console.log('Hello mother fucker')
+// })
 
 
 
