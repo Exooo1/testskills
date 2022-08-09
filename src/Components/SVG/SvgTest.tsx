@@ -13,8 +13,6 @@ import {useState} from "react";
 // Qэто квадратичная кривая Безье, опять же, для нее нужен целый учебник
 
 export const SvgTest = () => {
-
-
     return <div className='svgTest'>
         <h1>SVG</h1>
         <svg width='150' height='150' className='svg'>
