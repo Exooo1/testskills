@@ -18,7 +18,6 @@ export const App = () => {
     return <div>
         <SvgTest/>
         <h1>My name is Vlas, i am {age} old</h1>
-        <h2>Test Github</h2>
         <Buber element={<input/>}/>
         {/*<Functions/>*/}
         {/*<FuntioncGenerators/>*/}
