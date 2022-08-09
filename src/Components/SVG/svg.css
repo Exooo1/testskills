@@ -3,6 +3,7 @@
 }
 
 .svg {
+    color: greenyellow;
     margin: 0 10px;
     background: darkgrey;
     background-size: 150px 150px;
@@ -40,5 +41,8 @@ rect:before {
 }
 
 rect{
+}
+text{
+    color: greenyellow;
 }
 

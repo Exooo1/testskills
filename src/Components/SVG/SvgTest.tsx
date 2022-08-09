@@ -41,15 +41,19 @@ export const SvgTest = () => {
             <line className='line' x1='0' x2='140' y1='70' y2='70' stroke="#529fca" stroke-width="7"/>
         </svg>
         <svg width='150' height='155' className='svg'>
+            <text transform="rotate(90 -130 40)" x='40' y='120'>12</text>
+            <text>2</text>
+            <text>3</text>
+            <text>4</text>
             <g height='50' fill='black'>
-                <rect x='120' y='0' width='20' height={range} fill='#4c5cb1'/>
-                <path d={`M 140 ${range} l -5 5 l -20 0 l 5 -5 l 0 ${-range} l -5 5 l 0 ${range}`} fill='#3c4c92'
-                      stroke-width="0" stroke='yellow'/>
+                <path d={`M 140 ${range} l -20 0 l 0 ${-range} l -5 5 l 0 ${range} l 20 0 l 5 -5 l-20 0 l -5 5`} fill='#3c4c92'
+                      stroke-width="0.1" stroke='black'/>
+                <rect  x='120' y='0' width='20' height={range} fill='#4c5cb1'/>
             </g>
-            <g x='50' y='50'>
-                <rect x='90' y='0' width='20' height='94' fill='#4c5cb1'/>
-                <path d={`M 110 94 l -5 5 l -20 0 l 5 -5 l 0 -94 l -5 5 l 0 94`} fill='#3c4c92' stroke-width="0"
-                      stroke='yellow'/>
+            <g height='50' fill='black'>
+                <path d={`M 110 ${range} l -20 0 l 0 ${-range} l -5 5 l 0 ${range} l 20 0 l 5 -5 l-20 0 l -5 5`} fill='#3c4c92'
+                      stroke-width="0.1" stroke='black'/>
+                <rect  x='90' y='0' width='20' height={range} fill='#4c5cb1'/>
             </g>
             <g x='50' y='50'>
                 <rect x='60' y='0' width='20' height='67' fill='#4c5cb1'/>
