@@ -6,7 +6,7 @@
     margin: 0 10px;
     background: darkgrey;
     background-size: 150px 150px;
-    /*transform: rotate(180deg);*/
+    transform: rotate(180deg);
 }
 
 .chart {
@@ -39,10 +39,6 @@ rect:before {
     fill: green;
 }
 
-rect:hover {
-    transition: 1s;
-    transform: translate(20px);
-    opacity: 0.5;
-    fill: red
+rect{
 }
 
