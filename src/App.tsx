@@ -13,7 +13,6 @@ const Buber = ({element}: any) => {
 
 export const App = () => {
     let [age, setage] = useState(0)
-
     age = 24
     return <div>
         <SvgTest/>
