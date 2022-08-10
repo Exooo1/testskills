@@ -3,22 +3,15 @@ import './index.css'
 import {NumberT} from "./Components/Flangan/Number/Number";
 import {String} from "./Components/Flangan/String/String";
 import {SvgTest} from "./Components/SVG/SvgTest";
+import {Functions} from "./Components/Flangan/Function/Functions";
 
-const Buber = ({element}: any) => {
-    return <div>
-        <h1>Buber</h1>
-        {element}
-    </div>
-}
 
 export const App = () => {
-    let [age, setage] = useState(0)
-    age = 24
-    console.log('2')
+
     return <div>
         <SvgTest/>
-        <h1>My name is Vlas, i am {age} old</h1>
-        <Buber element={<input/>}/>
+        <Functions/>
+        {/*<h1>My name is Vlas, i am {age} old</h1>*/}
         {/*<Functions/>*/}
         {/*<FuntioncGenerators/>*/}
         {/*<String/>*/}
@@ -35,15 +28,3 @@ export const App = () => {
         {/*<ProgressFileBar/>*/}
     </div>
 }
-// const cron = (value: number, fun: () => void) => {
-//     setInterval(() => {
-//         fun()
-//     }, value * 1000)
-// }
-//
-// cron(10, () => {
-//     console.log('Hello mother fucker')
-// })
-
-
-
