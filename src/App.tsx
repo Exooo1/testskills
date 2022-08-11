@@ -4,13 +4,16 @@ import {NumberT} from "./Components/Flangan/Number/Number";
 import {String} from "./Components/Flangan/String/String";
 import {SvgTest} from "./Components/SVG/SvgTest";
 import {Functions} from "./Components/Flangan/Function/Functions";
-
+import {CustomHooksInput} from "./Components/CustomHooks/CustomHooks";
 
 export const App = () => {
-
+    const [name, setName, error] = CustomHooksInput()
     return <div>
-        <SvgTest/>
-        <Functions/>
+        {/*<SvgTest/>*/}
+        {/*<Functions/>*/}
+        <h1>{name}</h1>
+        <h1>{error}</h1>
+        <input type="text" onChange={(e) => setName(e.target.value)}/>
         {/*<h1>My name is Vlas, i am {age} old</h1>*/}
         {/*<Functions/>*/}
         {/*<FuntioncGenerators/>*/}
