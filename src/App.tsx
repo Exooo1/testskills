@@ -4,13 +4,6 @@ import {NumberT} from "./Components/Flangan/Number/Number";
 import {String} from "./Components/Flangan/String/String";
 import {SvgTest} from "./Components/SVG/SvgTest";
 
-const Buber = ({element}: any) => {
-    return <div>
-        <h1>Buber</h1>
-        {element}
-    </div>
-}
-
 export const App = () => {
     return <div>
         <SvgTest/>
