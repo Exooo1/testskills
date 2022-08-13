@@ -12,12 +12,8 @@ const Buber = ({element}: any) => {
 }
 
 export const App = () => {
-    let [age, setage] = useState(0)
-    age = 24
     return <div>
         <SvgTest/>
-        <h1>My name is Vlas, i am {age} old</h1>
-        <Buber element={<input/>}/>
         {/*<Functions/>*/}
         {/*<FuntioncGenerators/>*/}
         {/*<String/>*/}
