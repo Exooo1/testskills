@@ -12,7 +12,4 @@ createRoot(document.getElementById('root')).render(<App/>)
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
 
-export const TestReactDevTools = React.memo(() => {
-    console.log('HelloDevTools')
-    return <div><h2>Hello My name is vlas</h2></div>
-})
+
