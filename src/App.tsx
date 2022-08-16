@@ -5,11 +5,11 @@ import {String} from "./Components/Flangan/String/String";
 import {SvgTest} from "./Components/SVG/SvgTest";
 import {Functions} from "./Components/Flangan/Function/Functions";
 import {CustomHooksInput} from "./Components/CustomHooks/CustomHooks";
-import {inputHOC, MainHOC} from "./Components/HOC/MainHOC";
+import {AC, inputHOC, MainHOC} from "./Components/HOC/MainHOC";
 
 export const App = () => {
-    const Result = inputHOC<{ value: number }>(MainHOC)
-    return <Result value={2123123123123123}/>
+    const Result = inputHOC(MainHOC)
+    return <Result/>
     // return <div>
     //     <MainHOC/>
     //     {/*<SvgTest/>*/}
