@@ -136,8 +136,16 @@ export const SvgTest = () => {
 
             <circle cx="170" cy="60" r="50" fill="green" filter="url(#blurMe)"/>
         </svg>
-        <svg width='150' height='150' style={{background: 'darkgrey',}}>
-            <path stroke='red' d='M 10 150 l 20 -50 l 20 30 l 20 -30 l 20 -45 20 40 v -40.5 h -20 v -50 ' fill='darkgrey'/>
+        {/*<svg width='150' height='150' style={{background: 'darkgrey',}}>*/}
+        {/*    <path stroke='red' d='M 10 150 l 20 -50 l 20 30 l 20 -30 l 20 -45 20 40 v -40.5 h -20 v -50 ' fill='darkgrey'/>*/}
+        {/*</svg>*/}
+        {/*<svg width='500' height='500' style={{background: 'darkgrey',}}>*/}
+        {/*    <text rotate="20,0,5,30,10,50,5,10,65,5" x="30" y="90" fill="#ED6E46" font-size="50" font-family="'Leckerli One', cursive">Watermelon</text>*/}
+        {/*</svg>*/}
+        <svg width='500' height='500' style={{background: 'darkgrey',}}>
+
+            <path d='M 100,200 S 150,200 200,300 220,350 240,200' fill='darkgrey' stroke-width="2" stroke='yellow'/>
+            {/*<path d='M 100,200 C 100,300 200,300 ' fill='darkgrey' stroke-width="2" stroke='yellow'/>*/}
         </svg>
         {/*<input type="range" value={range} onChange={(e) => setRange(+e.target.value)}/>*/}
         {/*<svg className={'svg'}>*/}
