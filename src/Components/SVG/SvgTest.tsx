@@ -44,9 +44,10 @@ export const SvgTest = () => {
 
     const result = func()
     console.log(result)
-    const [range, setRange] = useState(150)
+    const [range, setRange] = useState(-10)
     return <div className='svgTest'>
         <h1>SVG</h1>
+
         <input type="range" value={range} onChange={(e) => setRange(+e.target.value)}/>
         {/*<svg width='150' height='150' className='svg'>*/}
         {/*    <g>*/}
@@ -144,7 +145,10 @@ export const SvgTest = () => {
         {/*</svg>*/}
         <svg width='500' height='500' style={{background: 'darkgrey',}}>
 
-            <path d='M 100,200 S 150,200 200,300 220,350 240,200' fill='darkgrey' stroke-width="2" stroke='yellow'/>
+            {/*<path d={`M 10,210 S 20,210 30,190 40,210 50,190 60,210 70,190 80,210 90,190`} fill='darkgrey' stroke-width="2"*/}
+            {/*      stroke='yellow'/>  */}
+            <path d={`M100,200 S 130,100 160,190`} fill='red' stroke-width="2"
+                  stroke='yellow'/>
             {/*<path d='M 100,200 C 100,300 200,300 ' fill='darkgrey' stroke-width="2" stroke='yellow'/>*/}
         </svg>
         {/*<input type="range" value={range} onChange={(e) => setRange(+e.target.value)}/>*/}
