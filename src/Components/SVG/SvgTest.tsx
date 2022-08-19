@@ -44,7 +44,7 @@ export const SvgTest = () => {
 
     const result = func()
     console.log(result)
-    const [range, setRange] = useState(-10)
+    const [range, setRange] = useState(100)
     return <div className='svgTest'>
         <h1>SVG</h1>
 
