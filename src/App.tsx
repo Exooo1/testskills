@@ -7,13 +7,10 @@ import {Functions} from "./Components/Flangan/Function/Functions";
 import {CustomHooksInput} from "./Components/CustomHooks/CustomHooks";
 import {AC, inputHOC, MainHOC} from "./Components/HOC/MainHOC";
 
+
 export const App = () => {
-    // const Result = inputHOC(MainHOC)
-    // return <Result/>
     return <div>
         <SvgTest/>
-        {/*<Functions/>*/}
-        {/*<h1>My name is Vlas, i am {age} old</h1>*/}
         {/*<Functions/>*/}
         {/*<FuntioncGenerators/>*/}
         {/*<String/>*/}
