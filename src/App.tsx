@@ -3,6 +3,10 @@ import './index.css'
 import {NumberT} from "./Components/Flangan/Number/Number";
 import {String} from "./Components/Flangan/String/String";
 import {SvgTest} from "./Components/SVG/SvgTest";
+import {Functions} from "./Components/Flangan/Function/Functions";
+import {CustomHooksInput} from "./Components/CustomHooks/CustomHooks";
+import {AC, inputHOC, MainHOC} from "./Components/HOC/MainHOC";
+
 
 export const App = () => {
     return <div>
@@ -23,15 +27,3 @@ export const App = () => {
         {/*<ProgressFileBar/>*/}
     </div>
 }
-// const cron = (value: number, fun: () => void) => {
-//     setInterval(() => {
-//         fun()
-//     }, value * 1000)
-// }
-//
-// cron(10, () => {
-//     console.log('Hello mother fucker')
-// })
-
-
-
