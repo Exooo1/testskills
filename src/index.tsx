@@ -11,11 +11,3 @@ createRoot(document.getElementById('root')).render(<App/>)
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> fix
-=======
->>>>>>> e2f02089d53f2be1e4ca6515715d247dfd26b846

@@ -4,11 +4,12 @@ import {NumberT} from "./Components/Flangan/Number/Number";
 import {String} from "./Components/Flangan/String/String";
 import {SvgTest} from "./Components/SVG/SvgTest";
 import {CustomHooksInput} from './Components/CustomHooks/CustomHooks';
-
+import {Pagination} from "./Components/Pagination/Pagination";
 
 export const App = () => {
     return <div>
-        <SvgTest/>
+        <Pagination/>
+        {/*<SvgTest/>*/}
         {/*<Functions/>*/}
         {/*<FuntioncGenerators/>*/}
         {/*<String/>*/}
