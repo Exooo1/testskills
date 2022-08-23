@@ -29,6 +29,16 @@ const sum2 = (value: number) => {
 const start = () => sum(6) === sum2(5) ? console.log('true') : console.log('false')
 start()*/
 
+const up = (q: number, c: (some: number) => void) => {
+    const b = 20;
+    const a = 20
+    c(b + a + q)
+}
+
+up(20, (a: number) => {
+    console.log(a)
+})
+
 
 
 
