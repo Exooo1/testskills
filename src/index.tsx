@@ -13,6 +13,9 @@ createRoot(document.getElementById('root')).render(<App/>)
 reportWebVitals();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> fix
+=======
+>>>>>>> e2f02089d53f2be1e4ca6515715d247dfd26b846
