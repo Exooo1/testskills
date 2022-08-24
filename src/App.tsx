@@ -5,10 +5,15 @@ import {String} from "./Components/Flangan/String/String";
 import {SvgTest} from "./Components/SVG/SvgTest";
 import {CustomHooksInput} from './Components/CustomHooks/CustomHooks';
 import {Pagination} from "./Components/Pagination/Pagination";
+import {AutoPag} from "./Components/AutoPag/AutoPag";
+import {AC, inputHOC, MainHOC} from "./Components/HOC/MainHOC";
 
 export const App = () => {
+    const Result = inputHOC<AC>(MainHOC)
     return <div>
-        <Pagination/>
+        <Result value={105}/>
+        {/*<AutoPag/>*/}
+        {/*<Pagination/>*/}
         {/*<SvgTest/>*/}
         {/*<Functions/>*/}
         {/*<FuntioncGenerators/>*/}
