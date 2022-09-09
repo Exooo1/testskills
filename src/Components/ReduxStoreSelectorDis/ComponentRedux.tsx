@@ -14,6 +14,7 @@ const TestComponentOne = () => {
     }, [countSelector])
 
     return <div>
+
         <h4 style={{color: 'green'}}>TestComponentOne</h4>
         <button onClick={() => dispatch(addCountAC())}>+</button>
         <p>{countSelector.count}</p>
@@ -24,12 +25,13 @@ const TestComponentOne = () => {
 
 export const ComponentRedux = () => {
     console.log('ComponentRedux')
-    // return <Provider store={store}>
-    //     <div>
-    //         <h3>Hello,my name is ComponentRedux</h3>
-    //         <TestComponentOne/>
-    //     </div>
-    // </Provider>
+    // @ts-ignore
+    return <Provider store={store}>
+        <div>
+            <h3>Hello,my name is ComponentRedux</h3>
+            <TestComponentOne/>
+        </div>
+    </Provider>
 }
 
 const Global = React.memo((props: any) => {

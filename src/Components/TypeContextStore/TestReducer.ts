@@ -1,4 +1,4 @@
-const initialPostState: any = {
+const initialPostState: {name:'vlas',age:number} = {
     name: 'vlas',
     age: 22
 }
@@ -6,7 +6,7 @@ const initialPostState: any = {
 export const TestReducer = (state = initialPostState, action: any): any => {
     switch (action.type) {
         default:
-            return {...state}
+            return state
     }
 }
 
