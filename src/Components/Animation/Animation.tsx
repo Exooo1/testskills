@@ -3,8 +3,9 @@ import {useEffect, useState} from "react";
 
 export const Animation = () => {
     const [count, setCount] = useState(1)
+    const [ff,setFF]=useState(false)
     const [value, setValue] = useState([
-        {id: 1, article: 'hello', status: false},
+        {id: 1, article: 'omg', status: false},
     ])
     // useEffect(() => {
     //     const int = setInterval(() => {
@@ -20,36 +21,76 @@ export const Animation = () => {
     //     }, 1000)
     //     return () => clearInterval(int)
     // }, [count])
-    const changeMe = (id: number) => {
-        setValue(value.map(item => {
-            if (id === item.id) return {...item, status: true}
-            return {...item, status: false}
-        }))
-    }
+    // const changeMe = (id: number) => {
+    //     setValue(value.map(item => {
+    //         if (id === item.id) return {...item, status: true}
+    //         return {...item, status: false}
+    //     }))
+    // }
     const addMe = () => {
-        setValue([...value, {id: value.length + 1, article: 'Some', status: false}])
-        setCount(count+1)
+        setValue([...value, {id: value.length + 1, article: 'Some' + value.length, status: false}])
     }
-    const deletes = (id: number) => {
-        setValue(value.filter((item) => {
-            if (item.id !== id) return {...item}
-        }))
+    const deletes = (id: number, e: any) => {
+        // console.log('1')
+        // setValue(value.map(item => {
+        //     if (id === item.id) return {...item, status: true}
+        //     else return {...item}
+        // }))
+        e.target.animate([
+            {transform: 'translate(150px)'}
+        ], 500)
+
+        setTimeout(()=>{
+            // @ts-ignore
+            document.getElementById('ss').removeChild(e.target)
+        },5000)
+        // setTimeout(()=>{
+        // // @ts-ignore
+        //     document.getElementById('ss').removeChild(e.target)
+        // },1000)
     }
-    useEffect(() => {
-        // @ts-ignore
-        const but = document.getElementById(`${count}`)
-        console.log(but)
-        if (but) {
-            but.animate([
-                {position:'relative',top:'0px',left:'10px'},
-                {top:'160px',left:'10px'},
-            ], 5000)
-        }
-    }, [count])
-    return <MainDiv>
+    // useEffect(() => {
+    //     // @ts-ignore
+    //     const but = document.getElementById(`${count}`)
+    //     console.log(but)
+    //     if (but) {
+    //         but.animate([
+    //             {position:'relative',top:'0px',left:'10px'},
+    //             {top:'160px',left:'10px'},
+    //         ], 5000)
+    //     }
+    // }, [count])
+    function b(e: any) {
+        // setFF(true)
+        // if (e.target.tagName === "LI") {
+        //     // @ts-ignore
+        //     const div = document.getElementById('ss')
+        //     const h1 = document.createElement('h1')
+        //     h1.innerText = 'hello'
+        //     // @ts-ignore
+        //     e.target.animate([
+        //         {transform: 'translate(150px)'},
+        //     ], 1000)
+        //     setTimeout(() => {
+                // @ts-ignore
+        //         div.removeChild(e.target)
+        //     }, 1000)
+        // }
+        // setTimeout(() => {
+        // }, 1000)
+    }
+
+    return <MainDiv id={'ss'} onClick={b} >
+        {/*<li>1</li>*/}
+        {/*<li>2</li>*/}
+        {/*<li>3</li>*/}
+        {/*<li>4</li>*/}
         <button onClick={addMe}>add</button>
-        {value.map(item => <div id={item.id + ""} style={{top:`${120*item.id}px`,left:'10px'}}
-                                onClick={() => deletes(item.id)}
-                              >{item.article}</div>)}
+        {value.map(item => <div className={item.status ? 'anim' : 'none'}
+                                onClick={(e) => deletes(item.id, e)}
+        >{item.article}</div>)}
+        <div className='test'>
+            {ff&&<div>2323</div>}
+        </div>
     </MainDiv>
 }

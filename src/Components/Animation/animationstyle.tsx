@@ -4,15 +4,18 @@ import styled, {keyframes} from 'styled-components'
 export const MainDiv = styled.div`
   height: 100vh;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  transition: 1s;
+  justify-content: center;
   align-items: center;
   background: blueviolet;
-
+.test{
+  div{
+    transition: 2s;
+    background: blueviolet;
+  }
+}
   div {
-    position: fixed;
-    top: 10px;
-    left: 10px;
+    margin: 0 10px;
     width: 200px;
     background: 200px;
     height: 100px;
@@ -20,10 +23,9 @@ export const MainDiv = styled.div`
     background: white;
   }
 
-  //.anim {
-  //  transition: 1s;
-  //  background: white;
-  //  transform: translate(0, -250px);
-  //}
-
+  .anim {
+    transition: 1s;
+    background: white;
+    transform: translate(0,150px);
+  }
 `
