@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const String = () => {
+export const Strings = () => {
     return <div>
         <h1>String</h1>
     </div>
@@ -49,6 +49,7 @@ const func = () => {
 }
 let y = 2 + func
     .toString()
+console.log(y)
 const f = (a: number) => {
     return a + 2
 }
@@ -118,3 +119,34 @@ const func_5
     =
     () => {
     }
+const city = 'My City!'
+
+console.log(city.substring(1, 2))
+console.log(city.slice(1))
+console.log(city.slice(-5))
+console.log(city.split(''))
+console.log(city.indexOf('C'))
+console.log(city.indexOf('C', 1)) //ищет букву C с первого элемента
+console.log(city.indexOf('b')) //return -1, this number is not found
+console.log(city.lastIndexOf('!')) //it is looking since end
+
+const anyWord = '#Smile'
+const bqqq = ['hint', 'blob']
+console.log(anyWord.startsWith('#'))//return true, it's looking since start line
+console.log(anyWord.endsWith('e'))//return true because this line end e
+console.log(anyWord.includes('S'))
+console.log(bqqq.includes('blob'))
+console.log(anyWord.replace('#', ''))
+console.log(anyWord.toLowerCase())
+console.log(anyWord.toUpperCase())
+console.log(anyWord.charAt(0))
+console.log(anyWord.charAt(anyWord.length - 1))
+console.log(anyWord.charCodeAt(0))
+console.log(anyWord.codePointAt(0))
+console.log('#'.charCodeAt(0))
+console.log("s".padStart(3))
+console.log("s".padStart(3, "#"))
+console.log(anyWord.trim()) // delete space left and right
+console.log(anyWord.trimStart()) // delete space left
+console.log(anyWord.trimEnd()) // delete space right
+console.log("Hello".repeat(10))
