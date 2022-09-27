@@ -1,9 +1,9 @@
-import {MainDiv} from "./animationstyle";
-import {useEffect, useState} from "react";
+import {Divs} from "./animationstyle";
+import {useState} from "react";
 
 export const Animation = () => {
     const [count, setCount] = useState(1)
-    const [ff,setFF]=useState(false)
+    const [ff, setFF] = useState(false)
     const [value, setValue] = useState([
         {id: 1, article: 'omg', status: false},
     ])
@@ -40,10 +40,10 @@ export const Animation = () => {
             {transform: 'translate(150px)'}
         ], 500)
 
-        setTimeout(()=>{
+        setTimeout(() => {
             // @ts-ignore
             document.getElementById('ss').removeChild(e.target)
-        },5000)
+        }, 5000)
         // setTimeout(()=>{
         // // @ts-ignore
         //     document.getElementById('ss').removeChild(e.target)
@@ -72,7 +72,7 @@ export const Animation = () => {
         //         {transform: 'translate(150px)'},
         //     ], 1000)
         //     setTimeout(() => {
-                // @ts-ignore
+        // @ts-ignore
         //         div.removeChild(e.target)
         //     }, 1000)
         // }
@@ -80,17 +80,19 @@ export const Animation = () => {
         // }, 1000)
     }
 
-    return <MainDiv id={'ss'} onClick={b} >
+    return <Divs>
+        <div>Scale</div>
+        <div className={'two'}>Translate</div>
         {/*<li>1</li>*/}
         {/*<li>2</li>*/}
         {/*<li>3</li>*/}
         {/*<li>4</li>*/}
-        <button onClick={addMe}>add</button>
-        {value.map(item => <div className={item.status ? 'anim' : 'none'}
-                                onClick={(e) => deletes(item.id, e)}
-        >{item.article}</div>)}
-        <div className='test'>
-            {ff&&<div>2323</div>}
-        </div>
-    </MainDiv>
+        {/*<button onClick={addMe}>add</button>*/}
+        {/*{value.map(item => <div className={item.status ? 'anim' : 'none'}*/}
+        {/*                        onClick={(e) => deletes(item.id, e)}*/}
+        {/*>{item.article}</div>)}*/}
+        {/*<div className='test'>*/}
+        {/*    {ff&&<div>2323</div>}*/}
+        {/*</div>*/}
+    </Divs>
 }

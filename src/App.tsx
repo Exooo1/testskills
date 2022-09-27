@@ -10,6 +10,7 @@ import {ComponentRedux,} from "./Components/ReduxStoreSelectorDis/ComponentRedux
 import axios from "axios";
 import {Animation} from "./Components/Animation/Animation";
 import {Strings} from "./Components/Flangan/String/String";
+import {Symbols} from "./Components/Flangan/Symbol/Symbol";
 
 const Api = {
     post(form: any) {
@@ -23,6 +24,7 @@ const Api = {
 export const App = () => {
     // const Result = inputHOC<AC>(MainHOC)
     return <div>
+        <Symbols/>
         {/*<button onClick={() => Api.post()}>click</button>*/}
         {/*<input type="file" onChange={async (e) => {*/}
         {/*    const formData = new FormData();*/}
@@ -43,7 +45,7 @@ export const App = () => {
         {/*<SvgTest/>*/}
         {/*<Functions/>*/}
         {/*<FuntioncGenerators/>*/}
-        <Strings/>
+        {/*<Strings/>*/}
         {/*<NumberT/>*/}
         {/*<Array/>*/}
         {/*<ChangeFaviconDynamic/>*/}
