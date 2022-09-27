@@ -31,3 +31,5 @@ console.log(text.match(reg))
 
 
 user['name'] = 'vlas'
+
+console.log('Git rest!')
