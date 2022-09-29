@@ -31,3 +31,15 @@ console.log(text.match(reg))
 
 
 user['name'] = 'vlas'
+
+const obj1 = [1, 2]
+let obj2 = [1]
+
+// for (let i = 0; i < obj1.length; i++) {
+//     obj2[i] = obj1[i]
+// }
+const c = Array.from(obj2)
+console.log(c[0]===obj2[0])
+console.log(obj1)
+console.log(obj2)
+console.log(obj1 === obj2)
