@@ -11,6 +11,7 @@ import axios from "axios";
 import {Animation} from "./Components/Animation/Animation";
 import {Strings} from "./Components/Flangan/String/String";
 import {Symbols} from "./Components/Flangan/Symbol/Symbol";
+import {ObjectTest} from "./Components/Flangan/Object/Object";
 
 const Api = {
     post(form: any) {
@@ -46,7 +47,8 @@ export const App = () => {
         {/*<Functions/>*/}
         {/*<FuntioncGenerators/>*/}
         {/*<Strings/>*/}
-        <NumberT/>
+        {/*<NumberT/>*/}
+        <ObjectTest/>
         {/*<Array/>*/}
         {/*<ChangeFaviconDynamic/>*/}
         {/*<MemoAndUseMemo/>*/}

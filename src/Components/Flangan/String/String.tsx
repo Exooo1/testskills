@@ -150,7 +150,8 @@ console.log(anyWord.trim()) // delete space left and right
 console.log(anyWord.trimStart()) // delete space left
 console.log(anyWord.trimEnd()) // delete space right
 console.log("Hello".repeat(10))
-
+console.log(!"")//will be false
+console.log(+"1"-1)//will be false 0
 
 
 

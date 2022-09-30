@@ -46,3 +46,5 @@ console.log(99999999999999999999999999999999999999999999999999999999999999999999
 // @ts-ignore
 console.log(223123123n<2)
 console.log(Number.parseInt('ff',16))
+console.log(+[])
+console.log(+[99])
