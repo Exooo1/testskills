@@ -24,7 +24,7 @@ const Api = {
 export const App = () => {
     // const Result = inputHOC<AC>(MainHOC)
     return <div>
-        <Symbols/>
+        {/*<Symbols/>*/}
         {/*<button onClick={() => Api.post()}>click</button>*/}
         {/*<input type="file" onChange={async (e) => {*/}
         {/*    const formData = new FormData();*/}
@@ -46,7 +46,7 @@ export const App = () => {
         {/*<Functions/>*/}
         {/*<FuntioncGenerators/>*/}
         {/*<Strings/>*/}
-        {/*<NumberT/>*/}
+        <NumberT/>
         {/*<Array/>*/}
         {/*<ChangeFaviconDynamic/>*/}
         {/*<MemoAndUseMemo/>*/}

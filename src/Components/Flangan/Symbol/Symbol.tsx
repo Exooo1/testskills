@@ -44,4 +44,12 @@ console.log(c[0]===obj2[0])
 console.log(obj1)
 console.log(obj2)
 console.log('Git rest!')
+const user1 = {
+    name:'vlas'
+}
+const user2=user1
+const a = String('vlas')
+console.log(a)
+const numb = 2
+console.log(!!!!numb)
 
