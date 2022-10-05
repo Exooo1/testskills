@@ -39,6 +39,15 @@ up(20, (a: number) => {
     console.log(a)
 })
 
+const func = (num: number, a?: (a: number) => void) => {
+    const num2 = 10
+    console.log(a?.(num * num2))
+
+}
+func(7,(item)=>{
+    return item*1000
+})
+
 
 
 

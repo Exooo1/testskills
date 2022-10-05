@@ -114,8 +114,15 @@ console.log(math.toString(2))
 // console.log(arrTest)
 // let [a, b] = [1, 5];
 // [a, b] = [b, a]
-
-// const q = {age: 22, name: 'vlas'}
+// const qq = [1,2,3,4,'5','6']
+// const q = {age: '22', name: 'vlas'}
+// for (let age of qq) {
+//     console.log(age)
+//     // console.log(person)
+// }
+// let [ag,nm]=Object.values(q)
+//     console.log(ag,nm)
+//     console.log(Object.values(q))
 //
 // for (let [age, name] of Object.entries(q)) {
 //     console.log(age, name)
@@ -126,7 +133,35 @@ console.log(math.toString(2))
 // // @ts-ignore
 // let  [one,two,...rests]='Hello Mother Fucker!'
 // console.log(one,two,rests)
+//
+// let {random, max} = Math
+// console.log(max(5, 10, 20))
+// console.log(random() * 10)
 
-let {random, max} = Math
-console.log(max(5, 10, 20))
-console.log(random() * 10)
+// const userq = {
+//     name: 'vlasiiiikkk'
+// }
+// console.log(userq?.['name'])
+
+// const func = (num: number, a?: (a: number) => void) => {
+//     const num2 = 10
+//     console.log(a?.(num * num2))
+// }
+// func(7, (item) => {
+//     console.log(item * 1000)
+// })
+
+const userq = {
+    m() {
+        console.log('Hello')
+    },
+    s() {
+        console.log('Hello')
+    },
+    d(s?: () => void) {
+        s?.()
+    },
+}
+
+// userq.s()
+console.log(userq.d())
