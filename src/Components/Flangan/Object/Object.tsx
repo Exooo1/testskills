@@ -85,3 +85,48 @@ const re = p.fixation((item) => {
     if (item < 4) return item
 })
 console.log(re)
+
+const testob = {
+    name: 'vlas', age: 27
+}
+const testob2 = {
+    name: 'Vladik', age: 27
+}
+
+function getUser(a: any, b: any, c?: any) {
+    // @ts-ignore
+    console.log(this.name + a + b + c)
+}
+
+getUser.bind(testob, 5, 5).bind(testob2)()
+
+let i = 5, j = 10, m = i + j
+console.log(m)
+
+let jitsu;
+// const mithu;
+
+const math = 23123123
+console.log(math.toString(2))
+
+// let arrTest = [1, 10];
+// arrTest = [10, 1]
+// console.log(arrTest)
+// let [a, b] = [1, 5];
+// [a, b] = [b, a]
+
+// const q = {age: 22, name: 'vlas'}
+//
+// for (let [age, name] of Object.entries(q)) {
+//     console.log(age, name)
+//     // console.log(person)
+// }
+// const [a, b, c, , , , e, f,...rest] = [1, 2, 3, 4, 5, 6, 7, 8, 's', 9, 0, 10]
+// console.log(a, b, c, e, f,rest)
+// // @ts-ignore
+// let  [one,two,...rests]='Hello Mother Fucker!'
+// console.log(one,two,rests)
+
+let {random, max} = Math
+console.log(max(5, 10, 20))
+console.log(random() * 10)
