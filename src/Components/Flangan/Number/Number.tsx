@@ -44,7 +44,24 @@ console.log(99999999999999999999999999999999999999999999999999999999999999999999
 
 //С ОБЫЧНЫМИ ОПЕРАТОРАМИ С РАВНЕВНИЯ ЭТО РАБОТАЕТ
 // @ts-ignore
-console.log(223123123n<2)
-console.log(Number.parseInt('ff',16))
-console.log(+[])
-console.log(+[99])
+// console.log(223123123n<2)
+// console.log(Number.parseInt('ff',16))
+// console.log(+[])
+// console.log(+[99])
+let a = 1, b = a++
+// let a = 1, b = ++a
+console.log(a, b)
+let m = '1'
+// @ts-ignore
+console.log(m++)//will be false 1
+
+var x = 1
+var x = 20
+console.log(x)
+
+
+const jeneric =<T extends number|string>(value:T)=>{
+   return value
+}
+
+// jeneric(false)

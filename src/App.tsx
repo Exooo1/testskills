@@ -12,6 +12,7 @@ import {Animation} from "./Components/Animation/Animation";
 import {Strings} from "./Components/Flangan/String/String";
 import {Symbols} from "./Components/Flangan/Symbol/Symbol";
 import {ObjectTest} from "./Components/Flangan/Object/Object";
+import {Operators} from "./Components/Flangan/Operators/Operators";
 
 const Api = {
     post(form: any) {
@@ -48,7 +49,8 @@ export const App = () => {
         {/*<FuntioncGenerators/>*/}
         {/*<Strings/>*/}
         {/*<NumberT/>*/}
-        <ObjectTest/>
+        <Operators/>
+        {/*<ObjectTest/>*/}
         {/*<Array/>*/}
         {/*<ChangeFaviconDynamic/>*/}
         {/*<MemoAndUseMemo/>*/}
