@@ -48,6 +48,26 @@ func(7,(item)=>{
     return item*1000
 })
 
+const userq = {
+    name: 'vlas',
+    getName() {
+        console.log(this.name)
+    },
+    getnames(){
+        const a = ()=>{
+            console.log(this.name)
+        }
+        a()
+    }
+}
+userq.getName()
+userq.getnames()
+
+const a = userq.getName
+const b = userq.getnames
+a.bind(userq)()
+b.call(userq)
+
 
 
 
