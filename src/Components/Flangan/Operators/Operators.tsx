@@ -1,6 +1,13 @@
+
 export const Operators = () => {
+    console.log('Oper')
+    const changeH1 = () => {
+        const result = document.getElementById('oper')
+        if (result) result.innerText = 'Hello'
+    }
     return <div>
-        <h1>Operators</h1>
+        <h1 id={'oper'}>Operators</h1>
+        <button onClick={changeH1}>click</button>
     </div>
 }
 
@@ -38,13 +45,30 @@ console.log(arr)
 delete arr [2]
 console.log(arr)
 const customer = {
-    name:'Any',
-    a:()=>{console.log(customer.name)}
+    name: 'Any',
+    a: () => {
+        console.log(customer.name)
+    }
 }
 console.log(customer)
 // @ts-ignore
 delete customer.a // return true is object has variable a
 console.log(customer)
-for(let i=0, l=1;i<10;i++,l++){
-    console.log(i+l)
+for (let i = 0, l = 1; i < 10; i++, l++) {
+    console.log(i + l)
+}
+
+const q = ''
+const cust = {}
+// delete q // will be error
+// delete cust.name // will be true
+
+const arrs: Array<number> = []
+console.log(arrs)
+for (let sm = 0; sm < 5; arrs.push(sm++)) ;
+console.log(arrs)
+const n = 'Some'
+let count = 1
+while (count++ < 10) {
+    console.log(count)
 }
