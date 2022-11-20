@@ -50,8 +50,8 @@ export const App = () => {
         {/*<FuntioncGenerators/>*/}
         {/*<Strings/>*/}
         {/*<NumberT/>*/}
-        {/*<Operators/>*/}
-        <Slider/>
+        <Operators/>
+        {/*<Slider/>*/}
         {/*<ObjectTest/>*/}
         {/*<Array/>*/}
         {/*<ChangeFaviconDynamic/>*/}
