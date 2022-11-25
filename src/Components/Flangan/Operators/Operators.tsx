@@ -30,11 +30,11 @@ export const Operators = () => {
 // console.log(rabbit instanceof Object)
 // console.log(array instanceof Array)
 //
-// let i = 0
-// const da = [2, 4]
-// console.log(da[++i] += 2)
-// // console.log(da[++i] *= 2)
-//
+let i = 0
+const da = [2, 4]
+console.log(da[i++] += 2)
+// console.log(da[++i] *= 2)
+
 // console.log(null ?? 5)
 // console.log(user)
 // // @ts-ignore
@@ -125,55 +125,65 @@ export const Operators = () => {
 //     console.log(ttq[m])
 // }
 
-for (let me = 0; me < 10; me++) {
-    if (me === 5) {
-        console.log('THE END!')
-        break;
-    }
-    console.log('go NEXT!')
-}
-
-for (let me = 0; me < 10; me++) {
-    if (me % 2) continue;
-    console.log(me)
-}
-let me = 0
-const arr = []
-while (me++ < 50) {
-    if (me < 40) continue;
-    arr.push(me)
-}
-console.log(arr)
-const user = {}
-// @ts-ignore
-for (let me = 0; me < user.length; me++) {
-    console.log(me)
-}
-
-const operator = (x: number) => {
-    try {
-        if (x > 50) throw new Error('Your number dont/t should be even')
-        console.log('All okay!')
-    } catch (err) {
-        console.log(err)
-        console.log(err)
-    } finally {
-        console.log('Capybara')
-    }
-}
-
-operator(62)
-// const result1 = prompt('Send message','')
-// console.log(result1)
-const array = []
-while (array.length < 50) {
-    if (array.length > 30){
-        array.push(2)
-    }
-    else while (true) {
-        me++
-        if (array.length === 45) break;
-        array.push(1)
-    }
-}
-console.log(array)
+// for (let me = 0; me < 10; me++) {
+//     if (me === 5) {
+//         console.log('THE END!')
+//         break;
+//     }
+//     console.log('go NEXT!')
+// }
+//
+// for (let me = 0; me < 10; me++) {
+//     if (me % 2) continue;
+//     console.log(me)
+// }
+// let me = 0
+// const arr = []
+// while (me++ < 50) {
+//     if (me < 40) continue;
+//     arr.push(me)
+// }
+// console.log(arr)
+// const user = {}
+// // @ts-ignore
+// for (let me = 0; me < user.length; me++) {
+//     console.log(me)
+// }
+//
+// const operator = (x: number) => {
+//     try {
+//         if (x > 50) throw new Error('Your number dont/t should be even')
+//         console.log('All okay!')
+//     } catch (err) {
+//         console.log(err)
+//         console.log(err)
+//     } finally {
+//         console.log('Capybara')
+//     }
+// }
+//
+// operator(62)
+// // const result1 = prompt('Send message','')
+// // console.log(result1)
+// const array = []
+// while (array.length < 50) {
+//     if (array.length > 30){
+//         array.push(2)
+//     }
+//     else some:while (true) {
+//         me++
+//         if (array.length === 45) break some;
+//         array.push(1)
+//     }
+// }
+// console.log(array)
+// const user = {
+//     name: 'vlas',
+//     age: 24
+// }
+// // @ts-ignore
+// with (user) {
+//     // @ts-ignore
+//     city='Minsk'
+// }
+// console.log(user)
