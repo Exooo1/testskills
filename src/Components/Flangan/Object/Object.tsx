@@ -1,167 +1,215 @@
+import axios from 'axios'
+
 export const ObjectTest = () => {
+    const Serafim = 'h1'
     return <div>
         <h1>Object</h1>
+        <Serafim>Hello my brother</Serafim>
         <input type="date" onChange={(e) => console.log(e.target.value)}/>
+        <audio/>
     </div>
 }
-const user = {
-    name: "vlas",
-    valueOf() {
-        return 15
-    }
-}
-
-function arr() {
-}
-
-const userArray = [12, 3, 4, 5, 6]
-console.log({} == {})
-console.log(user.toString())
-// @ts-ignore
-user[userArray.toString()] = 'this is array'
-console.log(userArray.toString())
-console.log(user)
-console.log(arr.toString())
-console.log(new Date().toString())
-console.log(userArray.valueOf())
-console.log(user.valueOf())
-console.log(arr.valueOf())
-console.log(new Date().valueOf())
-
-
+// const user: { name: string, age: 24, [key: string]: string | number } = {
+//     name: 'vlas',
+//     age: 24
+// }
+//
+// function User(name: string) {
+//     // @ts-ignore
+//     this.name = name
+// }
+//
+// const simpleObj = new Object({name: 'Vlas'})
+// const simpleObj2 = Object.create({name: 'Diana', age: 21})
+// const simpleObj3 = Object.create(null)
+// const simpleObj4 = Object.create(Object.prototype)
+// simpleObj4.name = 'vlad'
+// //simpleObj3.toString() Это будет ошибка, потому что мы указал null, поэтому этот объект ничего не унаслед.
+// console.log(simpleObj, simpleObj2, simpleObj3, simpleObj4)
 // // @ts-ignore
-// Array.prototype.bobs = function (a) {
-//     let array = []
-//     let th = this
-//     for (let i = 0; i < th.length; i++) {
-//         array.push(a(th[i]))
+// const vlas = new User('vlasik')
+// user.count = 15
+// user['country city'] = 'Belarus Minsk'
+// console.log(user, vlas)
+// console.log(user['name'], user.name)
+// console.log(user['some'])
+// // @ts-ignore
+// const result = user?.age?.length ?? 24
+// console.log(result)
+// console.log(user.toString())
+// const vl = new Object()
+// console.log(vl.hasOwnProperty('toString'))
+// user[Symbol('get')] = 'amega'
+// console.log(Object.getOwnPropertySymbols(user))
+// console.log(Object.keys(user))
+// console.log(Object.getOwnPropertyNames(user))
+// console.log(Reflect.ownKeys(user))
+// for (let me of Reflect.ownKeys(user)) {
+//     // @ts-ignore
+//     if (typeof me === 'symbol') continue;
+//     else { // @ts-ignore
+//         console.log(me +' Hello')
 //     }
-//     return array
 // }
-// const bo = [1, 2, 3, 4]
-// // @ts-ignore
-// const arrays = bo.bobs((item) => {
-//     return item + 10
-// })
-// console.log(arrays,"my map")
-//
-// const func = (f: (n: number) => void) => {
-//     const birthday = 5
-//     f(birthday)
-// }
-//
-// func((s) => {
-//     console.log(s + 10)
-// })
 
-// const call = (a: (p: number) => void, b?: () => number) => {
-//     let result = []
-//     for (let i = 0; i < 10; i++) {
-//         result.push(a(Math.random() * 10));
+// const youngUser = {name: 'Jhon', age: 27}
+// const averageUser = {name: 'Adam', age: 30, exp: 5}
+// const user = {name: 'Vlas'}
+// console.log(user)
+// for (let pe in youngUser) {
+//     // @ts-ignore
+//     if (user[pe]) continue
+//     else { // @ts-ignore
+//         user[pe] = youngUser[pe]
 //     }
-//     return result
+// }
+// console.log(user)
+// const user1 = Object.assign(averageUser, {city: 'Bobruisk'})
+// user1.exp = 10
+// console.log(user1)
+// console.log(averageUser)
+// const user2 = {...user1, hobby: 'Programm', ...youngUser}
+// console.log(user1, 'enter')
+// console.log(user2)
+// const user = {
+//     name: 'vlas',
+//     age: 24
 // }
 //
-// const bq = call((item) => {
-//     return item.toFixed() + 1
-// })
+// console.log(typeof JSON.stringify(user, () => {
+// }, 2) === 'string')
+// console.log(JSON.stringify(user))
+// console.log(JSON.parse(JSON.stringify(user)))
+// console.log(JSON.stringify(NaN))// will be NULL!
+// console.log(JSON.stringify(Infinity))
+// console.log(JSON.stringify(new Date()))
+// console.log(JSON.stringify(() => {
+// }))
+// const point = {
+//     x: 2000,
+//     toLocaleString: function () {
+//         return this.x.toLocaleString()
+//     }
+// }
+// console.log(point.toLocaleString())
+// const arr = new Array(2000, 3000, 3, 4)
+// console.log(arr.toLocaleString())
+// const n = 5000
+// console.log(n.toLocaleString())
+
 //
-// console.log(bq)
+// const NAME_FOR_USERS= 'ANY NAMES'
+// const user = {
+//     [NAME_FOR_USERS]:'VLAS'
+// }
+// console.log(user)
+// const sym = Symbol('Hack')
+// const user = {
+//     [sym]: 24
+// }
+// console.log(user)
+//
+// const u = {...user, name: 'vlas', age: 24}
+// console.log(u)
+// const sym =Symbol('get')
+// const user =Object.create({name:'vlas',age:24})
+// const userTwo = {...user,[sym]:'some words'}
+// console.log(userTwo)// userTwo doesn't have the values from user
+// console.log(userTwo[sym])
+
+// const user = {
+//     name: '',
+//     get names() {
+//         return this.name
+//     },
+//     set names(n: string) {
+//         this.name = n
+//     }
+// }
+// console.log(user)
+// user.names='vlas'
+// console.log(user)
+// console.log(user.names)
 
 // @ts-ignore
-Array.prototype.fixation = function (a) {
-    let result: any = []
-    let array = this
-    for (let i = 0; i < array.length; i++) {
-        const b = a(array[i])
-        if (b) result.push(a(array[i]))
-    }
-    return result
-}
-
-const p = [1, 2, 3, , 5, , , 7, 8,]
-// @ts-ignore
-const re = p.fixation((item) => {
-    if (item < 4) return item
-})
-console.log(re)
-
-const testob = {
-    name: 'vlas', age: 27
-}
-const testob2 = {
-    name: 'Vladik', age: 27
-}
-
-function getUser(a: any, b: any, c?: any) {
-    // @ts-ignore
-    console.log(this.name + a + b + c)
-}
-
-getUser.bind(testob, 5, 5).bind(testob2)()
-
-let i = 5, j = 10, m = i + j
-console.log(m)
-
-let jitsu;
-// const mithu;
-
-const math = 23123123
-console.log(math.toString(2))
-
-// let arrTest = [1, 10];
-// arrTest = [10, 1]
-// console.log(arrTest)
-// let [a, b] = [1, 5];
-// [a, b] = [b, a]
-// const qq = [1,2,3,4,'5','6']
-// const q = {age: '22', name: 'vlas'}
-// for (let age of qq) {
-//     console.log(age)
-//     // console.log(person)
+// Array.prototype.filterTest = function (func: any) {
+//     const array = this
+//     const ar = []
+//     for (let me = 0; me < array.length; me++) {
+//         const res = func(array[me])
+//         if (!res) continue
+//         ar.push(func(array[me]))
+//     }
+//     return ar
 // }
-// let [ag,nm]=Object.values(q)
-//     console.log(ag,nm)
-//     console.log(Object.values(q))
 //
-// for (let [age, name] of Object.entries(q)) {
-//     console.log(age, name)
-//     // console.log(person)
-// }
-// const [a, b, c, , , , e, f,...rest] = [1, 2, 3, 4, 5, 6, 7, 8, 's', 9, 0, 10]
-// console.log(a, b, c, e, f,rest)
+// const arr = [1, 2, 3, 4, 6]
 // // @ts-ignore
-// let  [one,two,...rests]='Hello Mother Fucker!'
-// console.log(one,two,rests)
-//
-// let {random, max} = Math
-// console.log(max(5, 10, 20))
-// console.log(random() * 10)
-
-// const userq = {
-//     name: 'vlasiiiikkk'
-// }
-// console.log(userq?.['name'])
-
-// const func = (num: number, a?: (a: number) => void) => {
-//     const num2 = 10
-//     console.log(a?.(num * num2))
-// }
-// func(7, (item) => {
-//     console.log(item * 1000)
+// const result = arr.filterTest((item) => {
+//     if (item === 4) return item
 // })
+// console.log(result)
 
-const userq = {
-    m() {
-        console.log('Hello')
-    },
-    s() {
-        console.log('Hello')
-    },
-    d(s?: () => void) {
-        s?.()
-    },
-}
+// const func = (f: any) => {
+//     const arr = []
+//     for (let me = 0; me < 100; me++) {
+//         arr.push(f(me))
+//     }
+//     return arr
+// }
+// const result = func((item: any) => {
+//     return (Math.random() * item).toString(36)
+// })
+// console.log(result)
+//
+// class User {
+//     private name: string
+//
+//     constructor(name: string) {
+//         this.name = name
+//     }
+//
+//     set names(setName: string) {
+//         this.name = setName
+//     }
+//
+//     get names() {
+//         return this.name
+//     }
+// }
+//
+// const vlas = new User('')
+// vlas.names='vlas'
+// console.log(vlas.names)
+//
+// const diana = Object.create(vlas)
+// diana.names='Diana'
+// console.log(diana)
 
-// userq.s()
-console.log(userq.d())
+// const us = {
+//     name: 'vlas',
+//     f(a: number) {
+//         if (a > 10) throw new Error('incorrect number')
+//         return (a * Math.random()).toFixed()
+//     }
+// }
+// console.log(us.f(1))
+// const arr = ['123',2,3,5,,6,'22223']
+// console.log(arr.toLocaleString())
+//
+// const a ={}
+// const ab = new Object({name:'vlas'})
+// // @ts-ignore
+// const abs =  Object.create(Object.prototype)
+// console.log(abs)
+
+// const func = async () => {
+//     const t = await axios.get('https://jsonplaceholder.typicode.com/posts')
+//     let b;
+//     if (t.status === 200) b = await axios.get('https://jsonplaceholder.typicode.com/posts')
+//     console.log(t, 't')
+//     console.log(b, 'b')
+// }
+// func()
+// func()
+// func()

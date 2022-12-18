@@ -187,3 +187,8 @@ console.log(da[i++] += 2)
 //     city='Minsk'
 // }
 // console.log(user)
+const user = {
+    name:'vlas',
+    age:24
+}
+console.log(Object.entries(user))

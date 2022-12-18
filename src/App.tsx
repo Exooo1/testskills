@@ -1,19 +1,7 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './index.css'
-import {NumberT} from "./Components/Flangan/Number/Number";
-import {SvgTest} from "./Components/SVG/SvgTest";
-import {CustomHooksInput} from './Components/CustomHooks/CustomHooks';
-import {Pagination} from "./Components/Pagination/Pagination";
-import {AutoPag} from "./Components/AutoPag/AutoPag";
-import {AC, inputHOC, MainHOC} from "./Components/HOC/MainHOC";
-import {ComponentRedux,} from "./Components/ReduxStoreSelectorDis/ComponentRedux";
 import axios from "axios";
-import {Animation} from "./Components/Animation/Animation";
-import {Strings} from "./Components/Flangan/String/String";
-import {Symbols} from "./Components/Flangan/Symbol/Symbol";
-import {ObjectTest} from "./Components/Flangan/Object/Object";
-import {Operators} from "./Components/Flangan/Operators/Operators";
-import {Slider} from "./Components/Animation/Slider";
+import {Arrays} from "./Components/Flangan/Array/Array";
 
 const Api = {
     post(form: any) {
@@ -25,6 +13,7 @@ const Api = {
     }
 }
 export const App = () => {
+    const user ={name:'vlas',age:24}
     // const Result = inputHOC<AC>(MainHOC)
     return <div>
         {/*<Symbols/>*/}
@@ -50,10 +39,11 @@ export const App = () => {
         {/*<FuntioncGenerators/>*/}
         {/*<Strings/>*/}
         {/*<NumberT/>*/}
-        <Operators/>
+        {/*<Operators/>*/}
+        {/*<ObjectTest/>*/}
         {/*<Slider/>*/}
         {/*<ObjectTest/>*/}
-        {/*<Array/>*/}
+        <Arrays />
         {/*<ChangeFaviconDynamic/>*/}
         {/*<MemoAndUseMemo/>*/}
         {/*<TypeContextStore/>*/}
