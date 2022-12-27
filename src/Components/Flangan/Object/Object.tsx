@@ -203,13 +203,3 @@ export const ObjectTest = () => {
 // const abs =  Object.create(Object.prototype)
 // console.log(abs)
 
-// const func = async () => {
-//     const t = await axios.get('https://jsonplaceholder.typicode.com/posts')
-//     let b;
-//     if (t.status === 200) b = await axios.get('https://jsonplaceholder.typicode.com/posts')
-//     console.log(t, 't')
-//     console.log(b, 'b')
-// }
-// func()
-// func()
-// func()
