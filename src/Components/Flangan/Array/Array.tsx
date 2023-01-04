@@ -1,15 +1,117 @@
-import React from 'react'
+import React, {useEffect, useLayoutEffect, useRef, useState} from 'react'
 
-const f = () => {
-    const write = File
+const TwoCount = React.memo(() => {
+    return <div>
+        <h1>Hello Vlas</h1>
+    </div>
+})
+const array = [1]
+array.push(2)
+array['-1'] = 3
+array[5] = 100
+// @ts-ignore
+array['serafim'] = 4
+// @ts-ignore
+array['somet'] = function () {
+    return (Math.random() * 10).toFixed()
 }
-export const Arrays = ({user}: any) => {
-    if (user) console.log(user)
-    const {name, age} = user || {name: 'vlas', age: 25}
-    console.log(name, age)
-    return <div><h1>Array {name + age}</h1><a href='../../../../public/logo512.png' id="link"
-                                              download="code">Download </a></div>
+// @ts-ignore
+console.log(array['somet']())
+export const Arrays = () => {
+    const Three = () => {
+        return <div>
+            Surprised!
+        </div>
+    }
+    useEffect(() => {
+        setCount(1000)
+    }, [])
+    const [count, setCount] = useState(1)
+    return <div>
+        <h1>Hello Serafim!</h1>
+        <button onClick={() => setCount(c => c + 1)}>{count}</button>
+        <TwoCount/>
+        <Three/>
+    </div>
 }
+// export const Arrays = () => {
+//     let ref = useRef()
+//     const [count, setCount] = useState(1)
+//     const [width, setWidth] = useState(0)
+//     const Time = () => {
+//         return <div>
+//             Hello
+//         </div>
+//     }
+//
+//     useEffect(() => {
+//         const start = new Date().getTime()
+//         let end = start
+//         while (end < start + 2000) {
+//             end = new Date().getTime()
+//         }
+//         // @ts-ignore
+//         setWidth(ref.current.clientWidth)
+//         // const elem = document.getElementById('block')
+//         // // @ts-ignore
+//         // // setCount(ref.current.clientWidth)
+//         // setCount(elem.clientWidth)
+//     }, [])
+//     // @ts-ignore
+//     return <div id={'block'} ref={ref}>
+//         <button onClick={() => setCount(count => count)}>click</button>
+//         <a href='../../../../public/logo512.png' id="link"
+//            download="code">Download </a>
+//         <Time/>
+//         <span>width: {width}</span>
+//         {/*<h1 onClick={() => {*/}
+//         {/*    setCount(1)*/}
+//         {/*}}>{count}</h1>*/}
+//     </div>
+// }
+
+// export class Arrays extends React.Component {
+//     state = {width: 0};
+//
+//     componentDidMount() {
+//         this.sleep(30000)
+//         // @ts-ignore
+//         this.setState({width: 3000})
+//     }
+//
+//     sleep(dur: any) {
+//         console.log(new Date().getTime())
+//         const start = new Date().getTime()
+//         let end = start
+//         while (end < start + dur) {
+//             end = new Date().getTime()
+//         }
+//     }
+//
+//     render() {
+//         const inc = () => {
+//             // @ts-ignore
+//             this.setState({width: this.ref.current.clientWidth})
+//         }
+//         return (
+//             // @ts-ignore
+//             <div className="app">
+//                 <span className="result">
+//           width: <b>{this.state.width}</b>
+//                     <button onClick={inc}>
+//                        {this.state.width}
+//                     </button>
+//         </span>
+//                 <h1>Hello</h1>
+//                 <h1>Hello</h1>
+//                 <h1>Hello</h1>
+//                 <h1>Hello</h1>
+//                 <h1>Hello</h1>
+//             </div>
+//         )
+//     }
+// }
+
 //
 // const arr = [3, 4, 5, 6]
 // const arrtwo = [1, 2, ...arr, 7, 8, 9, 10]
@@ -64,25 +166,25 @@ export const Arrays = ({user}: any) => {
 // }
 // console.log(table)
 
-const array = [1, 2, 3, 4, 5, 6]
+// const array = [1, 2, 3, 4, 5, 6]
 // const result = array.some(item => item < 4) - it will be true, because it has one element that is less than four
 // const result = array.every(item => item < 4) - it will be false, because all elements had be < 4
 // const result = array.filter(item => !(item % 2)) - filters your array about yuslovie
 // const result = array.filter(item => !(item % 2)) - filters your array about yuslovie
-const arrayUsers = [
-    {id: 1, name: 'vlas'},
-    {id: 2, name: 'vlad'},
-    {id: 3, name: 'vladd'},
-    {id: 4, name: 'Diana'},
-]
-const result = arrayUsers.reduce((i, j) => {
-    const u = {
-        id: 2,
-        name: ''
-    }
-    return {...u, id: i.id += j.id, name: i.name += j.name}
-})
+// const arrayUsers = [
+//     {id: 1, name: 'vlas'},
+//     {id: 2, name: 'vlad'},
+//     {id: 3, name: 'vladd'},
+//     {id: 4, name: 'Diana'},
+// ]
+// const result = arrayUsers.reduce((i, j) => {
+//     const u = {
+//         id: 2,
+//         name: ''
+//     }
+//     return {...u, id: i.id += j.id, name: i.name += j.name}
+// })
+// //
+// // const result = array.reduce((item, ites) => item + ites)
+// console.log(result)
 //
-// const result = array.reduce((item, ites) => item + ites)
-console.log(result)
-
