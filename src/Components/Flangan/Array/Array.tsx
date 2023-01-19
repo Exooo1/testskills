@@ -70,49 +70,7 @@ export const Arrays = () => {
 //     </div>
 // }
 
-// export class Arrays extends React.Component {
-//     state = {width: 0};
-//
-//     componentDidMount() {
-//         this.sleep(30000)
-//         // @ts-ignore
-//         this.setState({width: 3000})
-//     }
-//
-//     sleep(dur: any) {
-//         console.log(new Date().getTime())
-//         const start = new Date().getTime()
-//         let end = start
-//         while (end < start + dur) {
-//             end = new Date().getTime()
-//         }
-//     }
-//
-//     render() {
-//         const inc = () => {
-//             // @ts-ignore
-//             this.setState({width: this.ref.current.clientWidth})
-//         }
-//         return (
-//             // @ts-ignore
-//             <div className="app">
-//                 <span className="result">
-//           width: <b>{this.state.width}</b>
-//                     <button onClick={inc}>
-//                        {this.state.width}
-//                     </button>
-//         </span>
-//                 <h1>Hello</h1>
-//                 <h1>Hello</h1>
-//                 <h1>Hello</h1>
-//                 <h1>Hello</h1>
-//                 <h1>Hello</h1>
-//             </div>
-//         )
-//     }
-// }
 
-//
 // const arr = [3, 4, 5, 6]
 // const arrtwo = [1, 2, ...arr, 7, 8, 9, 10]
 // const arrthree = new Array()

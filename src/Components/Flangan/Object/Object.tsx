@@ -162,29 +162,29 @@ export const ObjectTest = () => {
 // })
 // console.log(result)
 //
-// class User {
-//     private name: string
-//
-//     constructor(name: string) {
-//         this.name = name
-//     }
-//
-//     set names(setName: string) {
-//         this.name = setName
-//     }
-//
-//     get names() {
-//         return this.name
-//     }
-// }
-//
-// const vlas = new User('')
-// vlas.names='vlas'
-// console.log(vlas.names)
-//
-// const diana = Object.create(vlas)
-// diana.names='Diana'
-// console.log(diana)
+class User {
+    private name: string
+
+    constructor(name: string) {
+        this.name = name
+    }
+
+    set names(setName: string) {
+        this.name = setName
+    }
+
+    get names() {
+        return this.name
+    }
+}
+
+const vlas = new User('')
+vlas.names='vlas'
+console.log(vlas.names)
+
+const diana = Object.create(vlas)
+diana.names='Diana'
+console.log(diana)
 
 // const us = {
 //     name: 'vlas',

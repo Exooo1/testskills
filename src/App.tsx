@@ -2,6 +2,7 @@ import React from 'react';
 import './index.css'
 import axios from "axios";
 import {Arrays} from "./Components/Flangan/Array/Array";
+import {ObjectTest} from "./Components/Flangan/Object/Object";
 
 const Api = {
     post(form: any) {
@@ -42,8 +43,8 @@ export const App = () => {
         {/*<Operators/>*/}
         {/*<ObjectTest/>*/}
         {/*<Slider/>*/}
-        {/*<ObjectTest/>*/}
-        <Arrays />
+        <ObjectTest/>
+        {/*<Arrays />*/}
         {/*<ChangeFaviconDynamic/>*/}
         {/*<MemoAndUseMemo/>*/}
         {/*<TypeContextStore/>*/}
