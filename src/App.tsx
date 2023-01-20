@@ -4,6 +4,7 @@ import axios from "axios";
 import {Arrays} from "./Components/Flangan/Array/Array";
 import {ObjectTest} from "./Components/Flangan/Object/Object";
 import {AC, inputHOC, MainHOC} from "./Components/HOC/MainHOC";
+import {ChildrenComponent} from "./Components/HOC/ChildrenComponent";
 
 const Api = {
     post(form: any) {
@@ -19,7 +20,12 @@ export const App = () => {
     const Result = inputHOC<AC>(MainHOC)
     // const Result = inputHOC(MainHOC)
     return <div>
-        <Result value={24}/>
+        <ChildrenComponent value={'this is test about children'}>
+            <div>
+                <p>Hello, my name is Vlad, i am beginner developer!</p>
+            </div>
+        </ChildrenComponent>
+        {/*<Result value={24}/>*/}
         {/*<Symbols/>*/}
         {/*<button onClick={() => Api.post()}>click</button>*/}
         {/*<input type="file" onChange={async (e) => {*/}
@@ -57,5 +63,13 @@ export const App = () => {
         {/*<Transition/>*/}
         {/*<TestSuspense/>*/}
         {/*<ProgressFileBar/>*/}
+    </div>
+}
+
+const Result = (props:any) => {
+    return <div>
+        <h1>Hello</h1>
+        <p>{props.name}</p>
+        <p>{props.age}</p>
     </div>
 }
