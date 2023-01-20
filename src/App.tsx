@@ -3,6 +3,7 @@ import './index.css'
 import axios from "axios";
 import {Arrays} from "./Components/Flangan/Array/Array";
 import {ObjectTest} from "./Components/Flangan/Object/Object";
+import {AC, inputHOC, MainHOC} from "./Components/HOC/MainHOC";
 
 const Api = {
     post(form: any) {
@@ -14,9 +15,11 @@ const Api = {
     }
 }
 export const App = () => {
-    const user ={name:'vlas',age:24}
-    // const Result = inputHOC<AC>(MainHOC)
+    const user = {name: 'vlas', age: 24}
+    const Result = inputHOC<AC>(MainHOC)
+    // const Result = inputHOC(MainHOC)
     return <div>
+        <Result value={24}/>
         {/*<Symbols/>*/}
         {/*<button onClick={() => Api.post()}>click</button>*/}
         {/*<input type="file" onChange={async (e) => {*/}

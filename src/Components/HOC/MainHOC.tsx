@@ -4,10 +4,10 @@ export type AC = {
     value: number
 }
 
-export const MainHOC = React.memo(() => {
+export const MainHOC = React.memo((props:AC) => {
+    console.log(props.value)
     return <div>
         <h1>Hello, this is main HOC</h1>
-        {/*<h2>{props.value}</h2>*/}
     </div>
 })
 
