@@ -2,7 +2,7 @@
     background: darkgrey;
     width: 300px;
     height: 400px;
-    overflow: auto;
+    overflow: hidden;
 }
 
 .content {

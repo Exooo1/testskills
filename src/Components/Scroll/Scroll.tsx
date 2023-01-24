@@ -18,13 +18,14 @@ export const Scroll = () => {
     const handlerMouseDown = (e: any) => {
         console.log('down')
         const elem = document.getElementById('coordinat')
-        // @ts-ignore
-        console.log(elem.scrollTop)
+        let client = e.clientY
+        console.log(client)
         // @ts-ignore
         elem.onmousemove = (e: any) => {
+            // @ts-ignore
             setClientY(e.clientY)
             // @ts-ignore
-            elem.scrollTo(0, e.clientY + clientY)
+            elem.scrollTo(0, e.clientY - client + clientY)
         }
     }
 
