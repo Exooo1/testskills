@@ -20,11 +20,10 @@ export const Scroll = () => {
         const elem = document.getElementById('coordinat')
         // @ts-ignore
         let client = e.clientY
-        console.log(client)
+        // @ts-ignore
+        console.log(elem.clientHeight)
         // @ts-ignore
         elem.onmousemove = (e: MouseEvent) => {
-            // @ts-ignore
-            setClientY(e.clientY)
             // @ts-ignore
             elem.scrollTo(0, e.clientY - client + clientY)
         }
@@ -44,5 +43,6 @@ export const Scroll = () => {
             This is Element
             {count.map(item => <h2>{item}</h2>)}
         </div>
+        <div>2</div>
     </div>
 }
