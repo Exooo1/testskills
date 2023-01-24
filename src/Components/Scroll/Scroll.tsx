@@ -18,10 +18,11 @@ export const Scroll = () => {
     const handlerMouseDown = (e: any) => {
         console.log('down')
         const elem = document.getElementById('coordinat')
+        // @ts-ignore
         let client = e.clientY
         console.log(client)
         // @ts-ignore
-        elem.onmousemove = (e: any) => {
+        elem.onmousemove = (e: MouseEvent) => {
             // @ts-ignore
             setClientY(e.clientY)
             // @ts-ignore
