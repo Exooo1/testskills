@@ -1,0 +1,14 @@
+.scroll {
+    background: darkgrey;
+    width: 300px;
+    height: 400px;
+    overflow: auto;
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}

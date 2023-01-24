@@ -5,6 +5,7 @@ import {Arrays} from "./Components/Flangan/Array/Array";
 import {ObjectTest} from "./Components/Flangan/Object/Object";
 import {AC, inputHOC, MainHOC} from "./Components/HOC/MainHOC";
 import {ChildrenComponent} from "./Components/HOC/ChildrenComponent";
+import {Scroll} from "./Components/Scroll/Scroll";
 
 const Api = {
     post(form: any) {
@@ -20,11 +21,12 @@ export const App = () => {
     const Result = inputHOC<AC>(MainHOC)
     // const Result = inputHOC(MainHOC)
     return <div>
-        <ChildrenComponent value={'this is test about children'}>
-            <div>
-                <p>Hello, my name is Vlad, i am beginner developer!</p>
-            </div>
-        </ChildrenComponent>
+        <Scroll/>
+        {/*<ChildrenComponent value={'this is test about children'}>*/}
+        {/*    <div>*/}
+        {/*        <p>Hello, my name is Vlad, i am beginner developer!</p>*/}
+        {/*    </div>*/}
+        {/*</ChildrenComponent>*/}
         {/*<Result value={24}/>*/}
         {/*<Symbols/>*/}
         {/*<button onClick={() => Api.post()}>click</button>*/}
@@ -52,7 +54,7 @@ export const App = () => {
         {/*<Operators/>*/}
         {/*<ObjectTest/>*/}
         {/*<Slider/>*/}
-        <ObjectTest/>
+        {/*<ObjectTest/>*/}
         {/*<Arrays />*/}
         {/*<ChangeFaviconDynamic/>*/}
         {/*<MemoAndUseMemo/>*/}
@@ -66,7 +68,7 @@ export const App = () => {
     </div>
 }
 
-const Result = (props:any) => {
+const Result = (props: any) => {
     return <div>
         <h1>Hello</h1>
         <p>{props.name}</p>
