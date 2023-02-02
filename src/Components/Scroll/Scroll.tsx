@@ -8,13 +8,6 @@ for (let i = 0; i < 50; i++) {
 export const Scroll = () => {
     const [clientY, setClientY] = useState(0)
     const [clientX, setClientX] = useState(0)
-    const handlerOnMouseMove = (e: any) => {
-        // const elem = document.getElementById('coordinat')
-        // setClientY(e.clientY)
-        // setClientX(e.clientX)
-        // @ts-ignore
-        // elem.scrollTo(0, e.clientY + 100)
-    }
     const handlerMouseDown = (e: any) => {
         console.log('down')
         const elem = document.getElementById('coordinat')
@@ -24,12 +17,19 @@ export const Scroll = () => {
         console.log(elem.clientHeight)
         // @ts-ignore
         elem.onmousemove = (e: MouseEvent) => {
+            console.log(e.clientY)
             // @ts-ignore
             elem.scrollTo(0, e.clientY - client + clientY)
         }
     }
+    const obj = {count: 0}
 
     return <div className={'content'}>
+        <h1 onClick={() => {
+            obj.count++
+            console.log(obj)
+        }
+        }>{obj.count}</h1>
         <h1>SCROLL Y:{clientY} - X:{clientX}</h1>
         <div id={'coordinat'} className={'scroll'} onMouseDown={handlerMouseDown} onMouseUp={() => {
             console.log('up')
@@ -46,3 +46,14 @@ export const Scroll = () => {
         <div>2</div>
     </div>
 }
+const obj = {}
+
+const arr = [1, 2, 'sr', 2, 1, {}, {}]
+
+const result: any[] = [...arr]
+const t = arr.map(i => {
+    const b = result.filter(item =>(i !== item))
+    console.log(b)
+
+})
+console.log(t)
