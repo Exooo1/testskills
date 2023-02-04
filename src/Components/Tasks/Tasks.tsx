@@ -43,3 +43,31 @@ const initials3 = (value: string) => {
 console.log(initials('Vlas Maskalenchik'))
 console.log(initials2('Diana Kostyan'))
 console.log(initials3('Diana Kostyan'))
+
+//minMax
+const minMax = (value: number[]) => {
+    let max = 0
+    let min = 0
+    max = value.reduce((p, c) => c > p ? c : p)
+    min = value.reduce((p, c) => c > p ? p : c)
+    return [max, min]
+}
+console.log(minMax([5, 6, 2, 291, 293012, 1, 32, 5]))
+
+const minMax2 = (value: number[]) => {
+    let max = 0
+    let min = value[0]
+    value.map(item => item > max ? max = item : min = item).map(item => min < item ? min : min = item)
+    return [max, min]
+}
+console.log(minMax2([5, 6, 1, 291, 293012, 32]))
+
+const minMax3 = (value:number[])=>{
+    return value.sort((a,b)=>b-a)
+}
+console.log(minMax3([5, 6, 1, 291, 293012, 32]))
+
+const minMax4 = (value:number[])=>{
+    return [Math.max(...value),Math.min(...value)]
+}
+console.log(minMax4([5, 6, 1, 291, 293012, 32]))
