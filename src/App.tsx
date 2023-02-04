@@ -6,6 +6,7 @@ import {ObjectTest} from "./Components/Flangan/Object/Object";
 import {AC, inputHOC, MainHOC} from "./Components/HOC/MainHOC";
 import {ChildrenComponent} from "./Components/HOC/ChildrenComponent";
 import {Scroll} from "./Components/Scroll/Scroll";
+import {Tasks} from "./Components/Tasks/Tasks";
 
 const Api = {
     post(form: any) {
@@ -21,7 +22,8 @@ export const App = () => {
     const Result = inputHOC<AC>(MainHOC)
     // const Result = inputHOC(MainHOC)
     return <div>
-        <Scroll/>
+        <Tasks/>
+        {/*<Scroll/>*/}
         {/*<ChildrenComponent value={'this is test about children'}>*/}
         {/*    <div>*/}
         {/*        <p>Hello, my name is Vlad, i am beginner developer!</p>*/}

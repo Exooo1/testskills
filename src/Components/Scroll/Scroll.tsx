@@ -46,14 +46,3 @@ export const Scroll = () => {
         <div>2</div>
     </div>
 }
-const obj = {}
-
-const arr = [1, 2, 'sr', 2, 1, {}, {}]
-
-const result: any[] = [...arr]
-const t = arr.map(i => {
-    const b = result.filter(item =>(i !== item))
-    console.log(b)
-
-})
-console.log(t)
