@@ -91,3 +91,11 @@ const romanNumber = (value: string) => {
     return result
 }
 console.log(romanNumber('MCMXCIV'))
+
+//MergeTwoArrays
+const mergeArrays = (value1: number[], value2: number[]) => {
+    const arr = [...value1, ...value2]
+    console.log(arr)
+    return arr.sort((a, b) => a - b)
+}
+console.log(mergeArrays([1, 2, 3, 4], [1, 23, 4,]))
