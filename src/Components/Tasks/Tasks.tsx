@@ -1,4 +1,5 @@
 import React from 'react'
+import {equal} from "assert";
 
 export const Tasks = () => {
     return <section>
@@ -62,12 +63,31 @@ const minMax2 = (value: number[]) => {
 }
 console.log(minMax2([5, 6, 1, 291, 293012, 32]))
 
-const minMax3 = (value:number[])=>{
-    return value.sort((a,b)=>b-a)
+const minMax3 = (value: number[]) => {
+    return value.sort((a, b) => b - a)
 }
 console.log(minMax3([5, 6, 1, 291, 293012, 32]))
 
-const minMax4 = (value:number[])=>{
-    return [Math.max(...value),Math.min(...value)]
+const minMax4 = (value: number[]) => {
+    return [Math.max(...value), Math.min(...value)]
 }
 console.log(minMax4([5, 6, 1, 291, 293012, 32]))
+console.log([5, 6, 1, 291, 293012, [123, 4, 5,], 32].toString().split(',', 5))
+console.log([5, 6, 1, 291, 293012, [123, 4, 5,], 32].join().split(','))
+
+//romanNumbers
+const romanNumber = (value: string) => {
+    let result = 0
+    const arr = [
+        {value: 'I', equal: 1},
+        {value: 'V', equal: 5},
+        {value: 'X', equal: 10},
+        {value: 'L', equal: 50},
+        {value: 'C', equal: 100},
+        {value: 'D', equal: 500},
+        {value: 'M', equal: 1000},
+    ]
+    value.split('').map(item => arr.map(i => i.value === item ? result += i.equal : null))
+    return result
+}
+console.log(romanNumber('MCMXCIV'))
