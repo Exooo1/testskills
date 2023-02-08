@@ -1,5 +1,4 @@
 import React from 'react'
-import {equal} from "assert";
 
 export const Tasks = () => {
     return <section>
@@ -99,3 +98,22 @@ const mergeArrays = (value1: number[], value2: number[]) => {
     return arr.sort((a, b) => a - b)
 }
 console.log(mergeArrays([1, 2, 3, 4], [1, 23, 4,]))
+
+//makeMethodAll
+const all = (promises: string[]) => {
+    const result: any = []
+    return new Promise((res, rej) => {
+        for (let i = 0; i < promises.length; i++) {
+            fetch(promises[i]).then(response => response.json()).then(data => {
+                result.push(data)
+                if (i === 1) res(result)
+            })
+        }
+
+    })
+}
+const getAll = async () => {
+    const result = await all(['https://jsonplaceholder.typicode.com/todos/1', 'https://jsonplaceholder.typicode.com/todos/1'])
+    console.log(result)
+}
+getAll()
