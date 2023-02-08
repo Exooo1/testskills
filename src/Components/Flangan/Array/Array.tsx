@@ -146,3 +146,15 @@ export const Arrays = () => {
 // // const result = array.reduce((item, ites) => item + ites)
 // console.log(result)
 //
+// const arr:any = []
+// @ts-ignore
+// console.log(arr.reduce((a,b)=>a+b))// it will be error,нельзя вызывать reduce на пустом массиве
+
+const arr = [12, 3, 4, [5, 6, 4, [5, 6,]]]
+console.log(arr.flat())//Будет 12,3,4,5,6,4,[5,6]
+console.log(arr.flat(2))//Будет 12, 3, 4, 5, 6, 4, 5, 6
+// @ts-ignore
+console.log(arr.flatMap(item => {
+    if (!Array.isArray(item)) return item + 10
+    else return item
+}))
