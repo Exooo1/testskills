@@ -107,13 +107,20 @@ const all = (promises: string[]) => {
             fetch(promises[i]).then(response => response.json()).then(data => {
                 result.push(data)
                 if (i === 1) res(result)
+            }).catch(error => {
+                rej(error)
+                i += 2
             })
         }
 
     })
 }
 const getAll = async () => {
-    const result = await all(['https://jsonplaceholder.typicode.com/todos/1', 'https://jsonplaceholder.typicode.com/todos/1'])
-    console.log(result)
+    try {
+        const result = await all(['https://jsonppicode.com/posts', 'https://jsonplaceholder.typicode.com/todos/1'])
+        console.log(result)
+    } catch (err) {
+        console.log(err)
+    }
 }
 getAll()
