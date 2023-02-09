@@ -170,7 +170,11 @@ export const Arrays = () => {
 
 
 const arr = [9, 6, 4, 2, 1, 2]
-console.log(arr.slice(1, 4))
-console.log(arr.slice(0, 4))
-console.log(arr.slice(2, -1))
-console.log(arr.slice(-6, -4))// Это надо запомнить, очень сложно!
+// console.log(arr.slice(1, 4))
+// console.log(arr.slice(0, 4))
+// console.log(arr.slice(2, -1))
+// console.log(arr.slice(-6, -4))// Это надо запомнить, очень сложно!
+
+console.log(arr.slice(5))
+console.log(arr.slice(2, -2))
+console.log(arr.slice(-5, -3))

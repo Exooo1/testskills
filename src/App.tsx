@@ -7,6 +7,7 @@ import {AC, inputHOC, MainHOC} from "./Components/HOC/MainHOC";
 import {ChildrenComponent} from "./Components/HOC/ChildrenComponent";
 import {Scroll} from "./Components/Scroll/Scroll";
 import {Tasks} from "./Components/Tasks/Tasks";
+import {Timer} from "./Components/Timer/timer";
 
 const Api = {
     post(form: any) {
@@ -57,7 +58,8 @@ export const App = () => {
         {/*<ObjectTest/>*/}
         {/*<Slider/>*/}
         {/*<ObjectTest/>*/}
-        <Arrays />
+        <Timer/>
+        {/*<Arrays />*/}
         {/*<ChangeFaviconDynamic/>*/}
         {/*<MemoAndUseMemo/>*/}
         {/*<TypeContextStore/>*/}
