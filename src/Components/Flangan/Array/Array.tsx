@@ -150,11 +150,21 @@ export const Arrays = () => {
 // @ts-ignore
 // console.log(arr.reduce((a,b)=>a+b))// it will be error,нельзя вызывать reduce на пустом массиве
 
-const arr = [12, 3, 4, [5, 6, 4, [5, 6,]]]
-console.log(arr.flat())//Будет 12,3,4,5,6,4,[5,6]
-console.log(arr.flat(2))//Будет 12, 3, 4, 5, 6, 4, 5, 6
-// @ts-ignore
-console.log(arr.flatMap(item => {
-    if (!Array.isArray(item)) return item + 10
-    else return item
-}))
+// const arr = [12, 3, 4, [5, 6, 4, [5, 6,]]]
+// console.log(arr.flat())//Будет 12,3,4,5,6,4,[5,6]
+// console.log(arr.flat(2))//Будет 12, 3, 4, 5, 6, 4, 5, 6
+// // @ts-ignore
+// console.log(arr.flatMap(item => {
+//     if (!Array.isArray(item)) return item + 10
+//     else return item
+// }))
+
+// const arr = [1, 23, 4, 5]
+// console.log(arr.concat([100, 200]))
+// // @ts-ignore
+// console.log(arr.concat(5, 5, [5, 4, [6, 7]]))
+// const t = arr.pop()
+// console.log(t)
+// console.log(arr.unshift(20))
+// console.log(arr.shift())
+
