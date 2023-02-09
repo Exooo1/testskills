@@ -168,3 +168,9 @@ export const Arrays = () => {
 // console.log(arr.unshift(20))
 // console.log(arr.shift())
 
+
+const arr = [9, 6, 4, 2, 1, 2]
+console.log(arr.slice(1, 4))
+console.log(arr.slice(0, 4))
+console.log(arr.slice(2, -1))
+console.log(arr.slice(-6, -4))// Это надо запомнить, очень сложно!
