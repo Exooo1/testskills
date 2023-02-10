@@ -23,7 +23,7 @@ export const App = () => {
     const Result = inputHOC<AC>(MainHOC)
     // const Result = inputHOC(MainHOC)
     return <div>
-        {/*<Tasks/>*/}
+        <Tasks/>
         {/*<Scroll/>*/}
         {/*<ChildrenComponent value={'this is test about children'}>*/}
         {/*    <div>*/}
@@ -58,7 +58,7 @@ export const App = () => {
         {/*<ObjectTest/>*/}
         {/*<Slider/>*/}
         {/*<ObjectTest/>*/}
-        <Timer/>
+        {/*<Timer/>*/}
         {/*<Arrays />*/}
         {/*<ChangeFaviconDynamic/>*/}
         {/*<MemoAndUseMemo/>*/}

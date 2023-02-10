@@ -124,3 +124,18 @@ const getAll = async () => {
     }
 }
 getAll()
+
+//repeatLetter
+const func = (value: string) => {
+    return value.split('').map((item, index) => item.toUpperCase() + item.repeat(index)).join('-')
+}
+const func1 = (value: string) => {
+    let result = []
+    for (let i = 0; i < value.length; i++) {
+        result.push(value[i].toUpperCase() + value[i].repeat(i))
+    }
+    return result.join('-')
+}
+console.log(func('vlas'))
+console.log(func1('some'))
+
