@@ -139,3 +139,12 @@ const func1 = (value: string) => {
 console.log(func('vlas'))
 console.log(func1('some'))
 
+//UpperCaseLetter
+
+const upperCaseLetter = (value: string) => {
+    const result: number[] = []
+    value.split('').filter((item, index) => item === item.toUpperCase() ? result.push(index) : null)
+    return result
+}
+console.log(upperCaseLetter('HellomynameisVlas'))
+
