@@ -8,6 +8,7 @@ import {ChildrenComponent} from "./Components/HOC/ChildrenComponent";
 import {Scroll} from "./Components/Scroll/Scroll";
 import {Tasks} from "./Components/Tasks/Tasks";
 import {Timer} from "./Components/Timer/timer";
+import {Slider} from "./Components/Animation/Slider";
 
 const Api = {
     post(form: any) {
@@ -23,7 +24,7 @@ export const App = () => {
     const Result = inputHOC<AC>(MainHOC)
     // const Result = inputHOC(MainHOC)
     return <div>
-        <Tasks/>
+        {/*<Tasks/>*/}
         {/*<Scroll/>*/}
         {/*<ChildrenComponent value={'this is test about children'}>*/}
         {/*    <div>*/}
@@ -59,7 +60,7 @@ export const App = () => {
         {/*<Slider/>*/}
         {/*<ObjectTest/>*/}
         {/*<Timer/>*/}
-        {/*<Arrays />*/}
+        <Arrays />
         {/*<ChangeFaviconDynamic/>*/}
         {/*<MemoAndUseMemo/>*/}
         {/*<TypeContextStore/>*/}

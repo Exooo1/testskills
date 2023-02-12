@@ -158,10 +158,12 @@ export const Arrays = () => {
 //     if (!Array.isArray(item)) return item + 10
 //     else return item
 // }))
-
+//
 // const arr = [1, 23, 4, 5]
+// const arrays = [5, 3, 12, 6, 7, 77]
+// console.log(arr.concat(arrays))
 // console.log(arr.concat([100, 200]))
-// // @ts-ignore
+// @ts-ignore
 // console.log(arr.concat(5, 5, [5, 4, [6, 7]]))
 // const t = arr.pop()
 // console.log(t)
@@ -169,12 +171,24 @@ export const Arrays = () => {
 // console.log(arr.shift())
 
 
-const arr = [9, 6, 4, 2, 1, 2]
+// const arr = [9, 6, 4, 2, 1, 2]
 // console.log(arr.slice(1, 4))
 // console.log(arr.slice(0, 4))
 // console.log(arr.slice(2, -1))
 // console.log(arr.slice(-6, -4))// Это надо запомнить, очень сложно!
 
-console.log(arr.slice(5))
-console.log(arr.slice(2, -2))
-console.log(arr.slice(-5, -3))
+//SPLICE - Возвращает массив, но и модифицирует основной массив.
+const splice: Array<number | string> = [1, 2, 3, 4, 5, 6]
+console.log(splice.splice(0, 1, 'a', 'b'))
+console.log(splice)
+console.log(splice.splice(1))
+
+//FILL - заполняет пустой массив значениями.
+const fill = [2, , , ,]
+// console.log(fill.fill(10, 1))
+// console.log(fill.fill(10, 1,2))
+console.log(fill.fill(10, -2))
+
+//copyWithin - Копирует значение в массиве.
+const copyWithin = [1, 2, 34, 5, 6]
+console.log(copyWithin.copyWithin(1, 0))
