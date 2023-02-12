@@ -140,11 +140,30 @@ console.log(func('vlas'))
 console.log(func1('some'))
 
 //UpperCaseLetter
-
 const upperCaseLetter = (value: string) => {
     const result: number[] = []
     value.split('').filter((item, index) => item === item.toUpperCase() ? result.push(index) : null)
     return result
 }
 console.log(upperCaseLetter('HellomynameisVlas'))
+
+//findPreviousMaxNumber
+const prevMaxNumber = (value: number[]) => {
+    return value.sort((a, b) => b - a)[1]
+}
+const prevMaxNumber1 = (value: number[]) => {
+    const max = Math.max(...value);
+    return value.reduce((acc, c) => c === max ? acc : Math.max(acc, c));
+}
+const prevMaxNumber2 = (value: number[]) => {
+    let max = 0;
+    let prevMax = 0;
+    value.map(item => item > max ? max = item : max)
+    value.filter(item => prevMax < item && item !== max ? prevMax = item : item)
+    return prevMax
+}
+console.log(prevMaxNumber([6, 3, 1, 23, 66, 3]))
+console.log(prevMaxNumber1([6, 3, 1, 23, 66, 3]))
+console.log(prevMaxNumber2([6, 3, 1, 23, 66, 3]))
+
 
