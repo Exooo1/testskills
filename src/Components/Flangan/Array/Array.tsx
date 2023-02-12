@@ -200,3 +200,41 @@ console.log(findIndex.findIndex(item => item === 'lemon')) //3
 console.log(findIndex.findIndex(item => item === 'cherry')) //-1
 console.log(findIndex.indexOf('lemon'))//3
 console.log(findIndex.indexOf('cherry'))//-1
+console.log(findIndex.indexOf('lemon', 2))//3 необязательный 2 параметр, будет искать с этого индекса
+const indexOfArray = [1, 2, 3, 1, 2, 1, 1, 1]
+const indexOf = () => {
+    let count = 0;
+    let last = 0;
+    while (count < indexOfArray.length) {
+        const result = indexOfArray.indexOf(1, last)
+        if (result > -1) {
+            last = result + 1
+            count++
+        } else break;
+    }
+    return count
+}
+console.log(indexOf())
+
+//includes
+const includes = ['some of', 'people', 'som', 'good']
+console.log(includes.includes('som'))//true
+console.log(includes.filter(item => item.includes('som')))
+
+//sort
+const sort = [1, 23, 4, 6, 5, 77]
+const sort1 = ['banana', 'apple', 'city', 'brown']
+console.log(sort.sort())
+console.log(sort.sort((a, b) => a - b))
+console.log(sort.sort((a, b) => b - a))
+console.log(sort1.sort())
+console.log(sort1.sort().reverse())
+
+let sort2 = ["ant", "Bug", "cat", "Dog"];
+sort2 .sort(function(s,t ) {
+    let a = s .toLowerCase();
+    let b = t .toLowerCase();
+    if (a < b) return -1;
+    if (a > b) return 1;
+    return 0;
+}); // sort не чувствительна к регистру
