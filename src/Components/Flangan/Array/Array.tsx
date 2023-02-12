@@ -190,5 +190,13 @@ const fill = [2, , , ,]
 console.log(fill.fill(10, -2))
 
 //copyWithin - Копирует значение в массиве.
-const copyWithin = [1, 2, 34, 5, 6]
-console.log(copyWithin.copyWithin(1, 0))
+const copyWithin = [1, 2, 3, 4, 5, 6, 7]
+// console.log(copyWithin.copyWithin(1, 0))
+console.log(copyWithin.copyWithin(0, 3))
+
+//findIndex - с объектами and indexOf - используется с примитивами.
+const findIndex = ['apple', 'orange', 'banana', 'lemon']
+console.log(findIndex.findIndex(item => item === 'lemon')) //3
+console.log(findIndex.findIndex(item => item === 'cherry')) //-1
+console.log(findIndex.indexOf('lemon'))//3
+console.log(findIndex.indexOf('cherry'))//-1
