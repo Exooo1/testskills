@@ -16,6 +16,12 @@
     height: 300px;
     box-shadow: 0 0 10px white;
 
+    input {
+      text-align: center;
+      width: 40px;
+      height: 40px;
+    }
+
     section {
       margin: 50px;
       display: flex;
@@ -55,6 +61,19 @@
     opacity: 1;
   }
 }
-.anim{
+
+.anim {
   animation: animP 1s;
+}
+
+.border {
+  .borderActive {
+    transition: 1s;
+    border: solid 1px red;
+    transform: translate(150px);
+  }
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
