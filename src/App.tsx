@@ -2,27 +2,10 @@ import React from 'react';
 import './index.css'
 import axios from "axios";
 import {Arrays} from "./Components/Flangan/Array/Array";
-import {ObjectTest} from "./Components/Flangan/Object/Object";
 import {AC, inputHOC, MainHOC} from "./Components/HOC/MainHOC";
-import {ChildrenComponent} from "./Components/HOC/ChildrenComponent";
-import {Scroll} from "./Components/Scroll/Scroll";
-import {Tasks} from "./Components/Tasks/Tasks";
-import {Timer} from "./Components/Timer/timer";
-import {Slider} from "./Components/Animation/Slider";
 
-const Api = {
-    post(form: any) {
-        return axios.post('http://localhost:8080/upload', form, {
-            headers: {
-                "Content-type": "multipart/form-data",
-            }
-        })
-    }
-}
 export const App = () => {
-    const user = {name: 'vlas', age: 24}
     const Result = inputHOC<AC>(MainHOC)
-    // const Result = inputHOC(MainHOC)
     return <div>
         {/*<Tasks/>*/}
         {/*<Scroll/>*/}
@@ -60,7 +43,7 @@ export const App = () => {
         {/*<Slider/>*/}
         {/*<ObjectTest/>*/}
         {/*<Timer/>*/}
-        <Arrays />
+        <Arrays/>
         {/*<ChangeFaviconDynamic/>*/}
         {/*<MemoAndUseMemo/>*/}
         {/*<TypeContextStore/>*/}
@@ -70,13 +53,5 @@ export const App = () => {
         {/*<Transition/>*/}
         {/*<TestSuspense/>*/}
         {/*<ProgressFileBar/>*/}
-    </div>
-}
-
-const Result = (props: any) => {
-    return <div>
-        <h1>Hello</h1>
-        <p>{props.name}</p>
-        <p>{props.age}</p>
     </div>
 }

@@ -1,74 +1,20 @@
-import React, {useEffect, useLayoutEffect, useRef, useState} from 'react'
+import React from 'react'
 
-const TwoCount = React.memo(() => {
-    return <div>
-        <h1>Hello Vlas</h1>
-    </div>
-})
-const array = [1]
-array.push(2)
-array['-1'] = 3
-array[5] = 100
-// @ts-ignore
-array['serafim'] = 4
-// @ts-ignore
-array['somet'] = function () {
-    return (Math.random() * 10).toFixed()
-}
-// @ts-ignore
-console.log(array['somet']())
 export const Arrays = () => {
-    const Three = () => {
-        return <div>
-            Surprised!
-        </div>
-    }
-    useEffect(() => {
-        setCount(1000)
-    }, [])
-    const [count, setCount] = useState(1)
     return <div>
-        <h1>Hello Serafim!</h1>
-        <button onClick={() => setCount(c => c + 1)}>{count}</button>
-        <TwoCount/>
-        <Three/>
+        <h1>Hello Array!</h1>
     </div>
 }
-// export const Arrays = () => {
-//     let ref = useRef()
-//     const [count, setCount] = useState(1)
-//     const [width, setWidth] = useState(0)
-//     const Time = () => {
-//         return <div>
-//             Hello
-//         </div>
-//     }
-//
-//     useEffect(() => {
-//         const start = new Date().getTime()
-//         let end = start
-//         while (end < start + 2000) {
-//             end = new Date().getTime()
-//         }
-//         // @ts-ignore
-//         setWidth(ref.current.clientWidth)
-//         // const elem = document.getElementById('block')
-//         // // @ts-ignore
-//         // // setCount(ref.current.clientWidth)
-//         // setCount(elem.clientWidth)
-//     }, [])
-//     // @ts-ignore
-//     return <div id={'block'} ref={ref}>
-//         <button onClick={() => setCount(count => count)}>click</button>
-//         <a href='../../../../public/logo512.png' id="link"
-//            download="code">Download </a>
-//         <Time/>
-//         <span>width: {width}</span>
-//         {/*<h1 onClick={() => {*/}
-//         {/*    setCount(1)*/}
-//         {/*}}>{count}</h1>*/}
-//     </div>
+//WE CAN ADD VALUES FOR ARRAYS
+// const array = [1]
+// array.push(2)
+// array['-1'] = 3
+// array[5] = 100
+// array['serafim'] = 4
+// array['somet'] = function () {
+//     return (Math.random() * 10).toFixed()
 // }
+// console.log(array['somet']())
 
 
 // const arr = [3, 4, 5, 6]
@@ -231,9 +177,9 @@ console.log(sort1.sort())
 console.log(sort1.sort().reverse())
 
 let sort2 = ["ant", "Bug", "cat", "Dog"];
-sort2 .sort(function(s,t ) {
-    let a = s .toLowerCase();
-    let b = t .toLowerCase();
+sort2.sort(function (s, t) {
+    let a = s.toLowerCase();
+    let b = t.toLowerCase();
     if (a < b) return -1;
     if (a > b) return 1;
     return 0;
