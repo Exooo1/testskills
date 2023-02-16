@@ -42,8 +42,9 @@ export const Card = () => {
                 <input type="text" maxLength={1} value={three} ref={refThree} onChange={switcher}/>
             </div>
             <section className={styles.border}>
-                <div className={focus.length >= 1 ? styles.borderActive : ''}><h1>Here: {focus}</h1></div>
+                <div className={focus && styles.borderActive}><h1>Here: {focus}</h1></div>
                 <input type="text" value={focus} onChange={handlerFocus}/>
+                <h1 className={focus && styles.h1}>Hello my friend</h1>
             </section>
         </section>
     </section>

@@ -67,13 +67,27 @@
 }
 
 .border {
+  h1{
+    transition: 2s;
+  }
   .borderActive {
     transition: 1s;
     border: solid 1px red;
     transform: translate(150px);
   }
 
+  div {
+    transition: 1s;
+
+    &:hover {
+      background: greenyellow;
+    }
+  }
+
   display: flex;
   justify-content: center;
   flex-direction: column;
+}
+.h1{
+  color: purple;
 }
