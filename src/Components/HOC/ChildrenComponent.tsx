@@ -2,8 +2,8 @@ import React, {ReactChild, ReactNode} from "react";
 
 type ChildrenComponentType = {
     value: number | string
-    // children: ReactNode
-    children: ReactChild
+    children: ReactNode
+    // children: ReactChild
 }
 export const ChildrenComponent: React.FC<ChildrenComponentType> = ({value, children}) => {
     return <div>
