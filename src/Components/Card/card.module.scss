@@ -67,9 +67,10 @@
 }
 
 .border {
-  h1{
+  h1 {
     transition: 2s;
   }
+
   .borderActive {
     transition: 1s;
     border: solid 1px red;
@@ -88,6 +89,47 @@
   justify-content: center;
   flex-direction: column;
 }
-.h1{
+
+.h1 {
   color: purple;
+}
+
+.block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  div {
+    transition: 1s;
+    width: 100px;
+    border-radius: 10px;
+    background: white;
+    height: 40px;
+  }
+
+  .isActive {
+    height: 150px;
+  }
+}
+
+.block2 {
+  background: green;
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+  width: 40px;
+
+  ul {
+    background: greenyellow;
+    position: static;
+    top: 470px;
+    gap: 50px;
+    transition: 200ms;
+    height: 0px;
+  }
+  .active {
+    height: 70px;
+  }
+
 }
