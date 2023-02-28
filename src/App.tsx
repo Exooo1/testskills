@@ -6,6 +6,7 @@ import {AC, inputHOC, MainHOC} from "./Components/HOC/MainHOC";
 import {ChildrenComponent} from "./Components/HOC/ChildrenComponent";
 import {Card} from "./Components/Card/card";
 import {Indexhtml} from "./Components/html/indexhtml";
+import {Animation} from "./Components/Animation/animation";
 
 export const App = () => {
     const Result = inputHOC<AC>(MainHOC)
@@ -30,6 +31,7 @@ export const App = () => {
         {/*<Slider/>*/}
         {/*<Timer/>*/}
         {/*<Arrays/>*/}
-        <Indexhtml/>
+        <Animation/>
+        {/*<Indexhtml/>*/}
     </div>
 }
