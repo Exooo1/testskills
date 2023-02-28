@@ -5,6 +5,7 @@ export const Arrays = () => {
         <h1>Hello Array!</h1>
     </div>
 }
+
 //WE CAN ADD VALUES FOR ARRAYS
 // const array = [1]
 // array.push(2)

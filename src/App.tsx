@@ -5,11 +5,12 @@ import {Arrays} from "./Components/Flangan/Array/Array";
 import {AC, inputHOC, MainHOC} from "./Components/HOC/MainHOC";
 import {ChildrenComponent} from "./Components/HOC/ChildrenComponent";
 import {Card} from "./Components/Card/card";
+import {Indexhtml} from "./Components/html/indexhtml";
 
 export const App = () => {
     const Result = inputHOC<AC>(MainHOC)
     return <div>
-        <Card/>
+        {/*<Card/>*/}
         {/*<Tasks/>*/}
         {/*<Scroll/>*/}
         {/*<ChildrenComponent value={'this is test about children'}><h1>some</h1><h3>some</h3></ChildrenComponent>*/}
@@ -29,5 +30,6 @@ export const App = () => {
         {/*<Slider/>*/}
         {/*<Timer/>*/}
         {/*<Arrays/>*/}
+        <Indexhtml/>
     </div>
 }
