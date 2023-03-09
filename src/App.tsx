@@ -7,6 +7,7 @@ import {ChildrenComponent} from "./Components/HOC/ChildrenComponent";
 import {Card} from "./Components/Card/card";
 import {Indexhtml} from "./Components/html/indexhtml";
 import {Animation} from "./Components/Animation/animation";
+import styles from './Components/Animation/circle/circle.module.scss'
 
 export const App = () => {
     const Result = inputHOC<AC>(MainHOC)
