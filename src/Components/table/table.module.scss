@@ -1,0 +1,96 @@
+.main {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  &_table {
+    display: flex;
+    border-radius: 20px;
+    background-color: rgba(56, 54, 54, 0.94);
+    height: 80vh;
+    width: 1000px;
+    background-size: 20% 100px;
+
+    &_teamOne {
+      background: #e65c00;
+      border-radius: 20px;
+      width: 250px;
+      display: flex;
+      justify-content: space-around;
+      flex-direction: column;
+      height: 80vh;
+
+    }
+    &_teamTwo {
+      background: green;
+      border-radius: 20px;
+      width: 250px;
+      display: flex;
+      justify-content: space-around;
+      flex-direction: column;
+      height: 80vh;
+    }
+    &_teamThree {
+      background: yellowgreen;
+    }
+    &_teamFour {
+      background: mediumpurple;
+    }
+  }
+}
+.topContent{
+  width: 250px;
+  height: 15vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  &>div:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 240px;
+    div{
+      border: solid 1px darkgrey;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 180px;
+      height: 7.5vh;
+    }
+  }
+}
+.botContent{
+  width: 250px;
+  height: 15vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  &>div:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 240px;
+    div{
+      border: solid 1px darkgrey;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 180px;
+      height: 7.5vh;
+    }
+  }
+}
+.top{
+  border-bottom: solid 2px black;
+  border-right: solid 1px black;
+  height:7.5vh;
+}
+.bot{
+  border-top: solid 2px black;
+  border-right: solid 1px black;
+  height: 60px;
+}

@@ -8,6 +8,7 @@ import {Card} from "./Components/Card/card";
 import {Indexhtml} from "./Components/html/indexhtml";
 import {Animation} from "./Components/Animation/animation";
 import styles from './Components/Animation/circle/circle.module.scss'
+import {Table} from "./Components/table/table";
 
 export const App = () => {
     const Result = inputHOC<AC>(MainHOC)
@@ -32,7 +33,8 @@ export const App = () => {
         {/*<Slider/>*/}
         {/*<Timer/>*/}
         {/*<Arrays/>*/}
-        <Animation/>
+        <Table/>
+        {/*<Animation/>*/}
         {/*<Indexhtml/>*/}
     </div>
 }
