@@ -187,8 +187,18 @@ console.log(da[i++] += 2)
 //     city='Minsk'
 // }
 // console.log(user)
-const user = {
-    name:'vlas',
-    age:24
+// const user = {
+//     name:'vlas',
+//     age:24
+// }
+// console.log(Object.entries(user))
+
+
+some:if('vlas'){
+    for(let val of 'vlas'){
+        if(val==='a') break some
+        console.log(val)
+    }
 }
-console.log(Object.entries(user))
+
+

@@ -6,68 +6,53 @@ export const Functions = () => {
     </div>
 }
 
-// const anyNumber = (value: number) => value + Math.ceil(Math.random() * 10)
-// const square = (value: number) => value + value
-// console.log(square(anyNumber(5)))
-
-// const anyNumber = (value: number) => value + Math.ceil(Math.random() * 10)
-// const square = (value: number, func: (value: number) => number) => {
-//     return value * value + func(value)
-// }
-// console.log(square(anyNumber(5), (value) => {
-//     return 2 + value
-// }))
-
-/*const sum = (value: number) => {
-    if (value > 5) return true
-    else return value
+const func = (value: string) => {
+    for (let val of value) console.log(val)
 }
-const sum2 = (value: number) => {
-    if (value > 3) return true
-    else return value
-}
-const start = () => sum(6) === sum2(5) ? console.log('true') : console.log('false')
-start()*/
+func('vlas')
 
-const up = (q: number, c: (some: number) => void) => {
-    const b = 20;
-    const a = 20
-    c(b + a + q)
+// @ts-ignore
+const func1 = (val: number) => {
+    if (val === 10) return val
+    return func1(val + 1)
 }
 
-up(20, (a: number) => {
+const result = func1(1)
+console.log(result)
+
+for (var c = 0; c < 4; c++) {
+    setTimeout(() => console.log(c), 1000)
+}
+
+// @ts-ignore
+// console.log(func3())
+// const func3 = function (){return 5}
+console.log(func2())
+
+function func2() {
+    return 5
+}
+
+const func3 = () => {
+    return {v: '100'}
+}
+const result1 = func3()
+console.log(result1)
+
+const callFunc = (value: number) => {
+    return value * 2
+}
+
+const func4 = (a: number,b?:(t:number)=>{}) => {
+    const result = b?.(a)
+    console.log(result)
     console.log(a)
-})
-
-const func = (num: number, a?: (a: number) => void) => {
-    const num2 = 10
-    console.log(a?.(num * num2))
-
 }
-func(7,(item)=>{
-    return item*1000
-})
 
-const userq = {
-    name: 'vlas',
-    getName() {
-        console.log(this.name)
-    },
-    getnames(){
-        const a = ()=>{
-            console.log(this.name)
-        }
-        a()
-    }
-}
-userq.getName()
-userq.getnames()
+func4(500,callFunc)
+func4(500)
 
-const a = userq.getName
-const b = userq.getnames
-a.bind(userq)()
-b.call(userq)
-
-
-
+// const strict = (function() { // @ts-ignore Находимся ли мы в строгом режиме!
+//     return !this; }())
+// console.log(strict)
 

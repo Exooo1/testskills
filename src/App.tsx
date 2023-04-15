@@ -10,6 +10,9 @@ import {Animation} from "./Components/Animation/animation";
 import styles from './Components/Animation/circle/circle.module.scss'
 import {Table} from "./Components/table/table";
 import {InstagramSlider} from "./Components/InstagramSlider/InstagramSlider";
+import {MemoCom} from "./Components/memoCom";
+import {Operators} from "./Components/Flangan/Operators/Operators";
+import {Functions} from "./Components/Flangan/Function/Functions";
 
 
 export const App = () => {
@@ -26,7 +29,7 @@ export const App = () => {
         {/*<AutoPag/>*/}
         {/*<Pagination/>*/}
         {/*<SvgTest/>*/}
-        {/*<Functions/>*/}
+        <Functions/>
         {/*<FuntioncGenerators/>*/}
         {/*<Strings/>*/}
         {/*<NumberT/>*/}
@@ -35,9 +38,10 @@ export const App = () => {
         {/*<Slider/>*/}
         {/*<Timer/>*/}
         {/*<Arrays/>*/}
+        {/*<MemoCom/>*/}
         {/*<Table/>*/}
         {/*<Animation/>*/}
         {/*<Indexhtml/>*/}
-        <InstagramSlider/>
+        {/*<InstagramSlider/>*/}
     </div>
 }

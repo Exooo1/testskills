@@ -1,8 +1,35 @@
 import React from 'react'
 
 export const Arrays = () => {
-    return <div>
+    // @ts-ignore
+    const array = [
+        {id: 1, name: 'vlas'},
+        {id: 2, name: 'vlad'},
+    ]
+    // @ts-ignore
+    console.log(array.map(item => <p>{item.name}</p>))
+
+    const H1 = 'h1'
+
+    const findError = (val: number) => {
+        try {
+            if (2 === val) throw new Error('Here is Error')
+
+        } catch (err) {
+            const error = err as Error
+            console.log(error.stack)
+        }
+    }
+
+    return <div style={{background: 'black'}}>
         <h1>Hello Array!</h1>
+        <div style={{color: 'white'}}>
+            {
+                // @ts-ignore
+                array.map(item => <p>{item.name}</p>)}
+        </div>
+        <H1>HelloBrohow are you!</H1>
+        <button onClick={() => findError(2)}>Click</button>
     </div>
 }
 
