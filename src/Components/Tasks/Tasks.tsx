@@ -100,19 +100,21 @@ const mergeArrays = (value1: number[], value2: number[]) => {
 console.log(mergeArrays([1, 2, 3, 4], [1, 23, 4,]))
 
 //makeMethodAll
-const all = (promises: string[]) => {
+const all = (value: string[]) => {
     const result: any = []
     return new Promise((res, rej) => {
-        for (let i = 0; i < promises.length; i++) {
-            fetch(promises[i]).then(response => response.json()).then(data => {
-                result.push(data)
-                if (i === 1) res(result)
-            }).catch(error => {
-                rej(error)
-                i += 2
+        for (let i = 0; i < value.length; i++) {
+            fetch(value[i]).then(response => response.json()).then(res2 => {
+                result.push(res2)
+                if (i === value.length - 1) {
+                    const isError = result.some((item: any) => !Array.isArray(item))
+                    if (isError) return
+                    else res(result)
+                }
+            }).catch(err => {
+                rej(err)
             })
         }
-
     })
 }
 const getAll = async () => {
