@@ -122,4 +122,4 @@ const func8 = ([x1, x2]: number[], [x3, x4]: number[]) => {
     return [x1 + x3, x4 + x2]
 }
 
-console.log(func8([4,5],[10,8]))
+console.log(func8([4, 5], [10, 8]))

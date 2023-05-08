@@ -164,6 +164,7 @@ export const ObjectTest = () => {
 //
 class User {
     private name: string
+    age: number = 25;
 
     constructor(name: string) {
         this.name = name
@@ -179,11 +180,11 @@ class User {
 }
 
 const vlas = new User('')
-vlas.names='vlas'
+vlas.names = 'vlas'
 console.log(vlas.names)
 
 const diana = Object.create(vlas)
-diana.names='Diana'
+diana.names = 'Diana'
 console.log(diana)
 
 // const us = {
