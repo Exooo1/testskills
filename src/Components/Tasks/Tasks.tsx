@@ -168,4 +168,16 @@ console.log(prevMaxNumber([6, 3, 1, 23, 66, 3]))
 console.log(prevMaxNumber1([6, 3, 1, 23, 66, 3]))
 console.log(prevMaxNumber2([6, 3, 1, 23, 66, 3]))
 
+const funct = ()=>{
+    const arr = [1,2,3,4]
+    return [...arr.map(item=>item*Math.random()*arr.length)]
+}
+
+const [a,b,c,d] = funct()
+console.log(a)
+console.log(b)
+console.log(c)
+console.log(d)
+
+
 

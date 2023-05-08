@@ -78,3 +78,37 @@ const switchFunc = (value: keyof user) => {
     }
 }
 switchFunc('country')
+
+const objectFunc  = {
+    name:'string',
+    me(){
+        const obj ={
+            surname:'',
+            getN(){
+                return this.surname
+            }
+        }
+        return obj
+    }
+}
+
+objectFunc.me().getN()
+
+const user  = {
+    total:0,
+    a(x:number){
+        this.total +=x
+        return this
+    },
+    b(x:number){
+        this.total +=x
+        return this
+    },
+    getTotal(){
+        return this.total
+    }
+}
+
+const result = user.a(15).b(25).total
+
+console.log(result )

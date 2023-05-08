@@ -13,6 +13,7 @@ import {InstagramSlider} from "./Components/InstagramSlider/InstagramSlider";
 import {MemoCom} from "./Components/memoCom";
 import {Operators} from "./Components/Flangan/Operators/Operators";
 import {Functions} from "./Components/Flangan/Function/Functions";
+import {Tasks} from "./Components/Tasks/Tasks";
 
 
 export const App = () => {
