@@ -14,6 +14,7 @@ import {MemoCom} from "./Components/memoCom";
 import {Operators} from "./Components/Flangan/Operators/Operators";
 import {Functions} from "./Components/Flangan/Function/Functions";
 import {Tasks} from "./Components/Tasks/Tasks";
+import {Constructor} from "./Components/Flangan/constructor/constructor";
 
 
 export const App = () => {
@@ -44,5 +45,6 @@ export const App = () => {
         {/*<Animation/>*/}
         {/*<Indexhtml/>*/}
         {/*<InstagramSlider/>*/}
+        <Constructor/>
     </div>
 }

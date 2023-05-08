@@ -79,12 +79,12 @@ const switchFunc = (value: keyof user) => {
 }
 switchFunc('country')
 
-const objectFunc  = {
-    name:'string',
-    me(){
-        const obj ={
-            surname:'',
-            getN(){
+const objectFunc = {
+    name: 'string',
+    me() {
+        const obj = {
+            surname: '',
+            getN() {
                 return this.surname
             }
         }
@@ -94,21 +94,32 @@ const objectFunc  = {
 
 objectFunc.me().getN()
 
-const user  = {
-    total:0,
-    a(x:number){
-        this.total +=x
+const user = {
+    total: 0,
+    a(x: number) {
+        this.total += x
         return this
     },
-    b(x:number){
-        this.total +=x
+    b(x: number) {
+        this.total += x
         return this
     },
-    getTotal(){
+    getTotal() {
         return this.total
     }
 }
 
 const result = user.a(15).b(25).total
+console.log(result)
 
-console.log(result )
+const func6 = (one: string = 'one', ...rest: string[]) => {
+    return one + rest.join('-')
+}
+
+console.log(func6(undefined, 'two', 'three', 'four'))
+
+const func8 = ([x1, x2]: number[], [x3, x4]: number[]) => {
+    return [x1 + x3, x4 + x2]
+}
+
+console.log(func8([4,5],[10,8]))
