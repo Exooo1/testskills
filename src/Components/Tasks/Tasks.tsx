@@ -180,4 +180,22 @@ console.log(c)
 console.log(d)
 
 
+//Постановка задачи
+const arrNumbers = [2,4,1,9,10]
+
+const equalNumbers = (arr:number[],value:number)=>{
+    let isEqual = false
+    arr.map((item,index)=>{
+        for(let i=0;i<arr.length;i++){
+            if(index===i) continue
+            if(item+arr[i]===value)isEqual=true
+        }
+    })
+    return isEqual
+}
+console.log(equalNumbers(arrNumbers,5))
+
+//Explorer
+
+
 

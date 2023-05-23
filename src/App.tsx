@@ -21,7 +21,7 @@ export const App = () => {
     const Result = inputHOC<AC>(MainHOC)
     return <div>
         {/*<Card/>*/}
-        {/*<Tasks/>*/}
+        <Tasks/>
         {/*<Scroll/>*/}
         {/*<ChildrenComponent value={'this is test about children'}><h1>some</h1><h3>some</h3></ChildrenComponent>*/}
         {/*<Result value={24}/>*/}
@@ -31,7 +31,7 @@ export const App = () => {
         {/*<AutoPag/>*/}
         {/*<Pagination/>*/}
         {/*<SvgTest/>*/}
-        <Functions/>
+        {/*<Functions/>*/}
         {/*<FuntioncGenerators/>*/}
         {/*<Strings/>*/}
         {/*<NumberT/>*/}
