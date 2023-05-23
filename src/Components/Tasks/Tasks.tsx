@@ -168,12 +168,12 @@ console.log(prevMaxNumber([6, 3, 1, 23, 66, 3]))
 console.log(prevMaxNumber1([6, 3, 1, 23, 66, 3]))
 console.log(prevMaxNumber2([6, 3, 1, 23, 66, 3]))
 
-const funct = ()=>{
-    const arr = [1,2,3,4]
-    return [...arr.map(item=>item*Math.random()*arr.length)]
+const funct = () => {
+    const arr = [1, 2, 3, 4]
+    return [...arr.map(item => item * Math.random() * arr.length)]
 }
 
-const [a,b,c,d] = funct()
+const [a, b, c, d] = funct()
 console.log(a)
 console.log(b)
 console.log(c)
@@ -181,21 +181,45 @@ console.log(d)
 
 
 //Постановка задачи
-const arrNumbers = [2,4,1,9,10]
+const arrNumbers = [2, 4, 1, 9, 10]
 
-const equalNumbers = (arr:number[],value:number)=>{
+const equalNumbers = (arr: number[], value: number) => {
     let isEqual = false
-    arr.map((item,index)=>{
-        for(let i=0;i<arr.length;i++){
-            if(index===i) continue
-            if(item+arr[i]===value)isEqual=true
+    arr.map((item, index) => {
+        for (let i = 0; i < arr.length; i++) {
+            if (index === i) continue
+            if (item + arr[i] === value) isEqual = true
         }
     })
     return isEqual
 }
-console.log(equalNumbers(arrNumbers,5))
+console.log(equalNumbers(arrNumbers, 5))
 
 //Explorer
+const taskExplorer = [
+    ["Mallory", "Everest", "Mont Blanc", "Pillar Rock"],
+    ["Mawson", "South Pole", "New Hebrides"],
+    ["Hillary", "Everest", "South Pole"]
+]
+const resExplorer: Array<string[]> = []
+const newExplorer = taskExplorer.map((item) => {
+    for (let i = 0; i < item.length; i++) {
+        if (i === 0) continue
+        if(!resExplorer.find(ele=>ele.find(el=>el===item[i])))
+        resExplorer.push([item[i]])
+    }
+    return item
+}).map(items=>{
+    items.map((el,ind)=>{
+        resExplorer.map((item,index)=>{
+            item.map(e=>{
+                if(e===el) resExplorer[index].push(items[0])
+            })
+        })
+    })
+})
+console.log(resExplorer)
+
 
 
 
