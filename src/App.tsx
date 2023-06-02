@@ -18,10 +18,31 @@ import {Constructor} from "./Components/Flangan/constructor/constructor";
 
 
 export const App = () => {
+
+    const all = async (val: string[]) => {
+        return new Promise((resolve, reject) => {
+            const results: any = []
+            for (let i = 0; i < val.length; i++) {
+                fetch(val[i]).then(response => response.json()).then(res => {
+                    results.push(res)
+                    if (results.length === 2) resolve(results)
+                })
+            }
+        })
+    }
+
+    const getItems = async (value: string[]) => {
+        const data = await all(value)
+        console.log(data)
+    }
+
     const Result = inputHOC<AC>(MainHOC)
     return <div>
         {/*<Card/>*/}
         <Tasks/>
+        <button
+            onClick={() => getItems(['https://jsonplaceholder.typicode.com/posts', 'https://jsonplaceholder.typicode.com/posts'])}>click
+        </button>
         {/*<Scroll/>*/}
         {/*<ChildrenComponent value={'this is test about children'}><h1>some</h1><h3>some</h3></ChildrenComponent>*/}
         {/*<Result value={24}/>*/}
@@ -45,6 +66,6 @@ export const App = () => {
         {/*<Animation/>*/}
         {/*<Indexhtml/>*/}
         {/*<InstagramSlider/>*/}
-        <Constructor/>
+        {/*<Constructor/>*/}
     </div>
 }
