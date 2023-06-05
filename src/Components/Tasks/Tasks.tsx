@@ -225,15 +225,56 @@ export const Tasks = () => {
 // @ts-ignore
 Array.prototype.last = function () {
     const arrays = this
-    if(arrays.length)return arrays[arrays.length-1]
+    if (arrays.length) return arrays[arrays.length - 1]
     else return -1
 }
-const arr = [1,2,3,4,55]
+const arr = [1, 2, 3, 4, 55]
 // @ts-ignore
 console.log(arr.last())
 
 
-
 //returnUndefined
 
+const once = () => {
+    let count = 0
+    return (...args: number[]) => {
+        if (count > 0) return undefined
+        const value = args.toString().split(',').length
+        ++count
+        return [{calls: count, value}]
+    }
+}
+const result = once()
+// @ts-ignore
+console.log(result([[5, 7, 4], [2, 3, 6], [4, 6, 8]]))
+// @ts-ignore
+console.log(result([[5, 7, 4], [2, 3, 6], [4, 6, 8]]))
+// @ts-ignore
+console.log(result([[5, 7, 4], [2, 3, 6], [4, 6, 8]]))
 
+
+//chunk Array
+const chunkArray = (value: number[], count: number) => {
+    if (!value.length) return []
+    let newArray: any = []
+    const arr: any = []
+    for (let i = 0; i < value.length; i++) {
+        if (newArray.length === count) {
+            arr.push(newArray)
+            newArray = []
+        }
+        newArray.push(value[i])
+    }
+    arr.push(newArray)
+}
+
+const chunkArray2 = (value: number[], count: number) => {
+    const num = value.length / count
+    const array = []
+    for (let i = 0; i < num; i++) {
+        array.push(value.splice(0, count))
+    }
+    return array
+}
+chunkArray([1, 2, 3, 4, 5, 6], 3)
+chunkArray2([1,2,3,4,5], 4)
