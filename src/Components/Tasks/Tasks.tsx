@@ -277,4 +277,33 @@ const chunkArray2 = (value: number[], count: number) => {
     return array
 }
 chunkArray([1, 2, 3, 4, 5, 6], 3)
-chunkArray2([1,2,3,4,5], 4)
+chunkArray2([1, 2, 3, 4, 5], 4)
+
+//TwoSum
+
+const twoSum = (nums: number[], target: number) => {
+    for (let i = 0; i < nums.length; i++) {
+        for (let y = 0; y < nums.length; y++) {
+            if (i === y) continue;
+            if ((nums[i] + nums[y]) === target) {
+                return [i, y]
+            }
+        }
+    }
+}
+
+const twoSum2 = (nums: number[], target: number) => {
+    const newArray: any = []
+    nums.map((item, one) => {
+        return nums.filter((el, two) => {
+            if ((item + el) === target) {
+                newArray.push(one, two)
+            }
+        })
+    })
+    if (!newArray.length) return [0, 0]
+    return newArray.splice(0, 2)
+}
+
+console.log(twoSum([2, 7, 11, 15], 9))
+console.log(twoSum2([3, 2, 4], 6))
